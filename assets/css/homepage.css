@@ -1,0 +1,253 @@
+/********** Template CSS **********/
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary: #B4E7FA;
+    --secondary: #F5D0C7;
+    --light: #F4ECE1;
+    --dark: #111111;
+    --main-font: "Poppins", sans-serif;
+}
+
+/*** Fonts ***/
+h1{
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+}
+
+hr{
+    height: 12px;
+    background-color: var(--dark);
+    width: 130px;
+    clear: both;
+}
+
+ul{
+    list-style: none;
+    text-decoration: none; 
+    color: black; 
+}
+
+
+
+
+
+/*** Section header ***/
+
+.section-header {
+    position: relative;
+    padding-top: 25px;
+}
+
+
+
+.section-header::before {
+    position: absolute;
+    content: "";
+    width: 60px;
+    height: 2px;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--primary);
+}
+
+
+
+.section-header::after {
+    position: absolute;
+    content: "";
+    width: 90px;
+    height: 2px;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--secondary);
+}
+
+.section-header.text-start::before,
+.section-header.text-start::after {
+    left: 0;
+    transform: translateX(0);
+}
+
+.header-nav {
+    color: #c9c9c9;
+    background: #000;
+    border-bottom: solid 1px #cfcfcf;
+    padding-top: 0.4285714286rem;
+    font-size: 0.8571428571rem;
+    height: 2rem;
+}
+
+.header-right{
+    flex: 50%;
+}
+
+.header-left{
+    flex: 50%;
+}
+
+@media (max-width: 700px){
+    .header-right{
+        flex: 50%;
+    }
+    
+    .header-left{
+        flex: 50%;
+    }
+}
+
+#header-nav-links li{
+    display: inline;
+    text-decoration: none;
+    color: white;
+}
+
+#header-nav-links li a{
+    display: inline;
+    text-decoration: none; 
+    color: grey;
+}
+
+#header-nav-links li a:hover{
+    color: white;
+}
+
+
+#header-nav-links li span{
+    display: inline;
+    text-decoration: none; 
+    color: grey;
+    margin-right: 2px;
+    margin-left: 2px;
+}
+
+#nav-links-theme .nav-link:hover{
+    color: var(--primary);
+    font-weight: 600;
+}
+
+@media (min-width: 791px){
+#nav-links-theme .nav-link::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50);
+    width: 0%;
+    height: 2px;
+    background-color: black;
+    visibility: hidden;
+    transition: 0.3s ease-in-out;
+}
+
+#nav-links-theme .nav-link::before, #nav-links-theme .nav-link::before{
+    width: 100%;
+    visibility: visible;
+}
+}
+/*
+
+
+.navbar-toggler{
+    border: none;
+    font-size: 1.25rem;
+}
+
+.navbar-toggler:focus, .btn-close:focus{
+    box-shadow: none;
+    outline: none;
+}
+*/
+
+
+
+#navbar-principal .navbar-brand img{
+    width: 130px; 
+    height: 110px;
+}
+
+#navbar-principal .navbar-brand{
+    overflow: hidden;
+}
+
+
+
+/* Carousel */
+
+
+.carousel-inner img{
+    height: 600px;
+}
+
+
+.shopping-kart{
+    position: relative;
+    border: 2px solid;
+    height: 3rem;
+    width: 5rem;
+    margin-right: 10px;
+}
+
+.shopping-kart img{
+    position: absolute;
+    left: 30px;
+    top: 5px;
+    width: 50%;
+    height: 90%;
+    display: inline;
+}
+
+.kart-badge{
+    position: absolute;
+    background-color: blue;
+    border: 2px solid;
+    color: white;
+    width: 20px;
+    text-align: center;
+    vertical-align: center;
+    line-height: 15px;
+    border-radius: 50%;
+    top: 0;
+    right: 0;
+}
+
+/*** Tipos de productos ***/
+
+.card h1{
+    margin: 30px;
+}
+
+
+
+div{
+    display: block;
+}
+
+.col-auto {
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    width: auto;
+    max-width: 100%;
+    float: left;
+}
+
+.main{
+    box-sizing: border-box;
+}
+
+#footer{
+    width: 100%;
+}
+
+
+/*** About us section ***/
+
+.about{
+    background-color: var(--light);
+}
