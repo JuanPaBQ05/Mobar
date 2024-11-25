@@ -209,8 +209,8 @@ h2{
 
 .kart-badge {
     position: absolute;
-    top: -5px; /* Ajusta la posición vertical */
-    right: -5px; /* Ajusta la posición horizontal */
+    top: -5px; 
+    right: -5px; 
     background-color: blue;
     color: white;
     width: 18px;
@@ -235,7 +235,7 @@ h2{
 
 
 
-/*** Tipos de productos ***/
+/*** Tipos de productos y seccion de catalogo ***/
 
 .section-title h1 {
     display: flex;
@@ -286,6 +286,7 @@ h2{
 
 .category-container img:hover {
     transform: scale(1.05);
+    transition-duration: 1s;
     content: url('');
 }
 
@@ -298,10 +299,35 @@ h2{
 
 .card img:hover {
     transform: scale(1.05); 
-    transition-duration: 1s;
+    transition-duration: 1.3s;
 }
 
 
+.btn-see-more {
+    background-color: black;  
+    color: white;             
+    border: none;            
+    padding: 10px 20px;       
+    font-size: 16px;         
+    font-weight: bold;        
+    border-radius: 10px;      
+    cursor: pointer;         
+    transition: all 0.3s ease; 
+}
+
+.see-more-section{
+    padding: 50px;
+}
+
+
+.btn-see-more:hover {
+    box-shadow: 0 0 10px var(--primary), 0 0 20px var(--primary);  
+}
+
+.btn-see-more:active {
+    box-shadow: 0 0 30px var(--primary), 0 0 50px var(--primary); 
+    transform: scale(0.98); 
+}
 
 .col-auto {
     -ms-flex: 0 0 auto;
@@ -315,9 +341,7 @@ h2{
     box-sizing: border-box;
 }
 
-#footer{
-    width: 100%;
-}
+
 
 
 /*** About us section ***/
@@ -326,8 +350,25 @@ h2{
     background-color: var(--light);
 }
 
+#content-about{
+    width: 1000px; 
+    height: 1000px;
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    background-image: url('assets/img/mountainbg.jpg');
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center; 
+    color: white; 
+}
 
 /*** Section Footer ***/
+
+#footer{
+    width: 100%;
+    font-family: "Poppins", sans-serif;
+}
 
 .section-footer{
     box-sizing: border-box;
@@ -336,5 +377,16 @@ h2{
 }
 
 .footer-column{
-    
+    font-family: "Poppins", sans-serif;
 }
+
+.section-footer-payments{
+    float: right;
+}
+
+.img-payments .img-footer-payment{
+    width: 5rem;
+    height: 2rem;
+    margin-bottom: 6px;
+}
+
