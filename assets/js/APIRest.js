@@ -3,7 +3,7 @@ var datos;
 	
 function CallServiceMenujq (tipo)
 {
-  var uriServer = "";
+  var uriServer = "https://si0sgs.github.io/restaurantly/assets/datos/menu.json";
   $.ajax({
     url: uriServer, 
     type: "get",

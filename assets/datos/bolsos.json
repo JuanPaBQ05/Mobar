@@ -1,6 +1,184 @@
 {
     "bolsos": [
-        
+      {
+        "nombre": "R42 Bl",
+        "cod": "R42 Bl",
+        "detalle": "Blanco",
+        "cant": 1,
+        "precio": 12000,
+        "imagen1": "url_de_imagen1_R42_Bl",
+        "imagen2": "url_de_imagen2_R42_Bl"
+      },
+      {
+        "nombre": "R42 Li",
+        "cod": "R42 Li",
+        "detalle": "Lila",
+        "cant": 1,
+        "precio": 12000,
+        "imagen1": "url_de_imagen1_R42_Li",
+        "imagen2": "url_de_imagen2_R42_Li"
+      },
+      {
+        "nombre": "Fashion",
+        "cod": "Fashion",
+        "detalle": "Camello",
+        "cant": 2,
+        "precio": 14000,
+        "imagen1": "url_de_imagen1_Fashion",
+        "imagen2": "url_de_imagen2_Fashion"
+      },
+      {
+        "nombre": "Golden",
+        "cod": "Golden",
+        "detalle": "Blanco",
+        "cant": 1,
+        "precio": 16500,
+        "imagen1": "url_de_imagen1_Golden",
+        "imagen2": "url_de_imagen2_Golden"
+      },
+      {
+        "nombre": "Man13 Az",
+        "cod": "Man13 Az",
+        "detalle": "Azul",
+        "cant": 1,
+        "precio": 13500,
+        "imagen1": "url_de_imagen1_Man13_Az",
+        "imagen2": "url_de_imagen2_Man13_Az"
+      },
+      {
+        "nombre": "Man13 Ne",
+        "cod": "Man13 Ne",
+        "detalle": "Negro",
+        "cant": 1,
+        "precio": 13500,
+        "imagen1": "url_de_imagen1_Man13_Ne",
+        "imagen2": "url_de_imagen2_Man13_Ne"
+      },
+      {
+        "nombre": "Elite",
+        "cod": "Elite",
+        "detalle": "Café de espalda",
+        "cant": 2,
+        "precio": 15500,
+        "imagen1": "url_de_imagen1_Elite",
+        "imagen2": "url_de_imagen2_Elite"
+      },
+      {
+        "nombre": "322 Caf",
+        "cod": "322 Caf",
+        "detalle": "Café",
+        "cant": 1,
+        "precio": 15500,
+        "imagen1": "url_de_imagen1_322_Caf",
+        "imagen2": "url_de_imagen2_322_Caf"
+      },
+      {
+        "nombre": "322 Bl",
+        "cod": "322 Bl",
+        "detalle": "Blanco",
+        "cant": 1,
+        "precio": 15500,
+        "imagen1": "url_de_imagen1_322_Bl",
+        "imagen2": "url_de_imagen2_322_Bl"
+      },
+      {
+        "nombre": "323 Cel",
+        "cod": "323 Cel",
+        "detalle": "Celeste",
+        "cant": 1,
+        "precio": 15000,
+        "imagen1": "url_de_imagen1_323_Cel",
+        "imagen2": "url_de_imagen2_323_Cel"
+      },
+      {
+        "nombre": "323 Caf",
+        "cod": "323 Caf",
+        "detalle": "Café",
+        "cant": 1,
+        "precio": 15000,
+        "imagen1": "url_de_imagen1_323_Caf",
+        "imagen2": "url_de_imagen2_323_Caf"
+      },
+      {
+        "nombre": "323 Ne",
+        "cod": "323 Ne",
+        "detalle": "Negro",
+        "cant": 1,
+        "precio": 15000,
+        "imagen1": "url_de_imagen1_323_Ne",
+        "imagen2": "url_de_imagen2_323_Ne"
+      },
+      {
+        "nombre": "323 Nu",
+        "cod": "323 Nu",
+        "detalle": "Nude",
+        "cant": 1,
+        "precio": 15000,
+        "imagen1": "url_de_imagen1_323_Nu",
+        "imagen2": "url_de_imagen2_323_Nu"
+      },
+      {
+        "nombre": "325 Cf",
+        "cod": "325 Cf",
+        "detalle": "Café",
+        "cant": 1,
+        "precio": 14000,
+        "imagen1": "url_de_imagen1_325_Cf",
+        "imagen2": "url_de_imagen2_325_Cf"
+      },
+      {
+        "nombre": "325 Bl",
+        "cod": "325 Bl",
+        "detalle": "Blanco",
+        "cant": 1,
+        "precio": 14000,
+        "imagen1": "url_de_imagen1_325_Bl",
+        "imagen2": "url_de_imagen2_325_Bl"
+      },
+      {
+        "nombre": "325 Ne",
+        "cod": "325 Ne",
+        "detalle": "Negro",
+        "cant": 1,
+        "precio": 14000,
+        "imagen1": "url_de_imagen1_325_Ne",
+        "imagen2": "url_de_imagen2_325_Ne"
+      },
+      {
+        "nombre": "x102 Ne",
+        "cod": "x102 Ne",
+        "detalle": "Negro",
+        "cant": 1,
+        "precio": 14000,
+        "imagen1": "url_de_imagen1_x102_Ne",
+        "imagen2": "url_de_imagen2_x102_Ne"
+      },
+      {
+        "nombre": "x102n/B",
+        "cod": "x102n/B",
+        "detalle": "Negro y blanco",
+        "cant": 1,
+        "precio": 14000,
+        "imagen1": "url_de_imagen1_x102n_B",
+        "imagen2": "url_de_imagen2_x102n_B"
+      },
+      {
+        "nombre": "303 Ca",
+        "cod": "303 Ca",
+        "detalle": "Café",
+        "cant": 1,
+        "precio": 15000,
+        "imagen1": "url_de_imagen1_303_Ca",
+        "imagen2": "url_de_imagen2_303_Ca"
+      },
+      {
+        "nombre": "303 Ne",
+        "cod": "303 Ne",
+        "detalle": "Negro",
+        "cant": 1,
+        "precio": 15000,
+        "imagen1": "url_de_imagen1_303_Ne",
+        "imagen2": "url_de_imagen2_303_Ne"
+      }
     ]
-
-}
+  }
