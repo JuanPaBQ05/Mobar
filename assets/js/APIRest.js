@@ -31,11 +31,11 @@ function OnError(jqXHR, textStatus, errorThrown)
 function cargarMenu(tipo){
 
   try {
-    
     let MenuId = document.getElementById("menu-container-id")
     MenuId.innerHTML = "";
     let menuItem;
-  
+    let moneda = registrarMoneda(2,"");
+    let tipoCambio = 1.00;
     datos.platillos.forEach(platillo => {
       menuItem = "";
       menuItem = `
@@ -61,3 +61,4 @@ function cargarMenu(tipo){
 
     
 }
+

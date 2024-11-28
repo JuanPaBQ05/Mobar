@@ -34,3 +34,35 @@ window.onscroll = function () {
 
 
 }
+
+
+const slides = document.querySelectorAll('.slide');
+const indicators = document.querySelectorAll('.indicator');
+
+let currentSlide = 0;
+
+// Function to update the slider
+function updateSlider(index) {
+  slides.forEach((slide, i) => {
+    slide.classList.remove('active');
+    indicators[i].classList.remove('active');
+    if (i === index) {
+      slide.classList.add('active');
+      indicators[i].classList.add('active');
+    }
+  });
+}
+
+// Add click event listeners to indicators
+indicators.forEach((indicator, index) => {
+  indicator.addEventListener('click', () => {
+    currentSlide = index;
+    updateSlider(index);
+  });
+});
+
+// Auto-slide every 5 seconds (optional)
+setInterval(() => {
+  currentSlide = (currentSlide + 1) % slides.length;
+  updateSlider(currentSlide);
+}, 5000);

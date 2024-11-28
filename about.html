@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Mobar CR</title>
+    <title>Mobar About</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -22,15 +22,14 @@
     <!--Google fonts links-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;700;800&display=swap"
-        rel="stylesheet">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;700;800&family=Send+Flowers&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Poppins:wght@100;200;400;500;700;800&family=Send+Flowers&display=swap"
         rel="stylesheet">
 
+    <!--Google maps API-->
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBYhkD0um6SB6piNH9hia0Vpj1HyWQ7p_0&libraries=geometry,places">
+        </script>
 
     <!--Customized Bootstrap Stylesheet -->
     <!--link rel="stylesheet" href="assets/css/bootstrap.min.css" -->
@@ -40,7 +39,6 @@
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-
 </head>
 
 <body>
@@ -101,7 +99,7 @@
                             </li>
                             <!-- Dropdown para Catálogo -->
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle mx-lg-2" href="#" id="catalogoDropdown" role="button"
+                                <a class="nav-link dropdown-toggle mx-lg-2" href="catalogo.html" id="catalogoDropdown" role="button"
                                     data-bs-toggle="dropdown" aria-expanded="false">
                                     Catálogo
                                 </a>
@@ -146,28 +144,95 @@
                     </div>
                     <div class="content-about-elements">
                         <div class="row">
-                            <div class="col-md-4 about-info-img">
+                            <div class="col-md-4 about-info-img justify-content-center">
                                 <img src="assets/img/about-img2.png" alt="">
                             </div>
                             <div class="col-md-8 about-info-text">
-                                <h2>¿Quienes somos?</h2>
+                                <div class="header-with-lines">
+                                    <div class="line"></div>
+                                    <h2>¿Quiénes somos?</h2>
+                                    <div class="line"></div>
+                                </div>
                                 <p>
                                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Non fugiat quaerat alias
                                     similique a voluptates,
                                     hic in, nihil illo repellendus suscipit atque quis vitae modi. Error, nobis esse.
                                     Tempora, veniam!
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Id numquam saepe perferendis cumque consequuntur ad placeat officiis? Fuga ullam aliquid, 
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Id numquam saepe
+                                    perferendis cumque consequuntur ad placeat officiis? Fuga ullam aliquid,
                                     hic eius accusantium iste libero deserunt, dolores soluta, totam velit!
                                 </p>
                             </div>
                             <div class="col-md-8">
-                                <h3></h3>
+                                <div class="header-with-lines">
+                                    <div class="line"></div>
+                                    <h2>Nuestra visión</h2>
+                                    <div class="line"></div>
+                                </div>
                                 <p></p>
                             </div>
                             <div class="col-md-4 text-center" id="about-info-video-container">
                                 <div class="about-info-video">
                                     <video src="assets/video/Mobar-emprendimiento.mp4" controls></video>
                                 </div>
+                            </div>
+                            <div class="col-md-12 fundadores">
+                                <h3 class="ms-4">Fundadores</h3>
+                                <div class="row justify-content-center">
+                                    <div class="col-md-4 founder">
+                                        <img src="assets/img/Andrea-Mobar.jpeg" alt="Founder 1" class="founder-1">
+                                        <div class="">
+                                            <div class="founder-info">
+                                                <h5>Andrea Lucía Barrantes Quirós</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 founder">
+                                        <img src="assets/img/Andres-mobar.jpeg" alt="Founder 2" class="founder-2">
+                                        <div class="founder-info">
+                                            <h5>Jose Andrés Mora Solorzano</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12" id="location">
+            <div class="row">
+                <div class="col-md-6 location-text">
+                    <h2>Contáctenos</h2>
+                    <div class="line"></div>
+                    <div class="info-item">
+                        <div class="icon-circle">
+                            <i class="bi bi-geo-alt-fill"></i>
+                        </div>
+                        <p class="info-text">Av. Central, Ciudad</p> 
+                    </div>
+                    <div class="info-item">
+                        <div class="icon-circle">
+                            <i class="bi bi-whatsapp"></i>
+                        </div>
+                        <p class="info-text">+506 8716 6811</p> 
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="location-container">
+                        <div id="map"></div>
+                        <div id="route-info">
+                            <div class="route-item">
+                                <div class="route-icon">
+                                    <i class="bi bi-alarm"></i>
+                                </div>
+                                <div class="route-text" id="route-time">Tiempo estimado: ---</div>
+                            </div>
+                            <div class="route-item">
+                                <div class="route-icon">
+                                    <i class="bi bi-car-front-fill"></i>
+                                </div>
+                                <div class="route-text" id="route-distance">Distancia: ---</div>
                             </div>
                         </div>
                     </div>
@@ -275,6 +340,8 @@
 
 
     <script src="assets/js/index.js"></script>
+    <script src="assets/js/dom.js"></script>
+    <script src="assets/js/APIRest.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 </body>
 

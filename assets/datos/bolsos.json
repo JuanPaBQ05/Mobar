@@ -1,184 +1,368 @@
 {
-    "bolsos": [
-      {
-        "nombre": "R42 Bl",
-        "cod": "R42 Bl",
-        "detalle": "Blanco",
-        "cant": 1,
-        "precio": 12000,
-        "imagen1": "url_de_imagen1_R42_Bl",
-        "imagen2": "url_de_imagen2_R42_Bl"
-      },
-      {
-        "nombre": "R42 Li",
-        "cod": "R42 Li",
-        "detalle": "Lila",
-        "cant": 1,
-        "precio": 12000,
-        "imagen1": "url_de_imagen1_R42_Li",
-        "imagen2": "url_de_imagen2_R42_Li"
-      },
-      {
-        "nombre": "Fashion",
-        "cod": "Fashion",
-        "detalle": "Camello",
-        "cant": 2,
-        "precio": 14000,
-        "imagen1": "url_de_imagen1_Fashion",
-        "imagen2": "url_de_imagen2_Fashion"
-      },
-      {
-        "nombre": "Golden",
-        "cod": "Golden",
-        "detalle": "Blanco",
-        "cant": 1,
-        "precio": 16500,
-        "imagen1": "url_de_imagen1_Golden",
-        "imagen2": "url_de_imagen2_Golden"
-      },
-      {
-        "nombre": "Man13 Az",
-        "cod": "Man13 Az",
-        "detalle": "Azul",
-        "cant": 1,
-        "precio": 13500,
-        "imagen1": "url_de_imagen1_Man13_Az",
-        "imagen2": "url_de_imagen2_Man13_Az"
-      },
-      {
-        "nombre": "Man13 Ne",
-        "cod": "Man13 Ne",
-        "detalle": "Negro",
-        "cant": 1,
-        "precio": 13500,
-        "imagen1": "url_de_imagen1_Man13_Ne",
-        "imagen2": "url_de_imagen2_Man13_Ne"
-      },
-      {
-        "nombre": "Elite",
-        "cod": "Elite",
-        "detalle": "Café de espalda",
-        "cant": 2,
-        "precio": 15500,
-        "imagen1": "url_de_imagen1_Elite",
-        "imagen2": "url_de_imagen2_Elite"
-      },
-      {
-        "nombre": "322 Caf",
-        "cod": "322 Caf",
-        "detalle": "Café",
-        "cant": 1,
-        "precio": 15500,
-        "imagen1": "url_de_imagen1_322_Caf",
-        "imagen2": "url_de_imagen2_322_Caf"
-      },
-      {
-        "nombre": "322 Bl",
-        "cod": "322 Bl",
-        "detalle": "Blanco",
-        "cant": 1,
-        "precio": 15500,
-        "imagen1": "url_de_imagen1_322_Bl",
-        "imagen2": "url_de_imagen2_322_Bl"
-      },
-      {
-        "nombre": "323 Cel",
-        "cod": "323 Cel",
-        "detalle": "Celeste",
-        "cant": 1,
-        "precio": 15000,
-        "imagen1": "url_de_imagen1_323_Cel",
-        "imagen2": "url_de_imagen2_323_Cel"
-      },
-      {
-        "nombre": "323 Caf",
-        "cod": "323 Caf",
-        "detalle": "Café",
-        "cant": 1,
-        "precio": 15000,
-        "imagen1": "url_de_imagen1_323_Caf",
-        "imagen2": "url_de_imagen2_323_Caf"
-      },
-      {
-        "nombre": "323 Ne",
-        "cod": "323 Ne",
-        "detalle": "Negro",
-        "cant": 1,
-        "precio": 15000,
-        "imagen1": "url_de_imagen1_323_Ne",
-        "imagen2": "url_de_imagen2_323_Ne"
-      },
-      {
-        "nombre": "323 Nu",
-        "cod": "323 Nu",
-        "detalle": "Nude",
-        "cant": 1,
-        "precio": 15000,
-        "imagen1": "url_de_imagen1_323_Nu",
-        "imagen2": "url_de_imagen2_323_Nu"
-      },
-      {
-        "nombre": "325 Cf",
-        "cod": "325 Cf",
-        "detalle": "Café",
-        "cant": 1,
-        "precio": 14000,
-        "imagen1": "url_de_imagen1_325_Cf",
-        "imagen2": "url_de_imagen2_325_Cf"
-      },
-      {
-        "nombre": "325 Bl",
-        "cod": "325 Bl",
-        "detalle": "Blanco",
-        "cant": 1,
-        "precio": 14000,
-        "imagen1": "url_de_imagen1_325_Bl",
-        "imagen2": "url_de_imagen2_325_Bl"
-      },
-      {
-        "nombre": "325 Ne",
-        "cod": "325 Ne",
-        "detalle": "Negro",
-        "cant": 1,
-        "precio": 14000,
-        "imagen1": "url_de_imagen1_325_Ne",
-        "imagen2": "url_de_imagen2_325_Ne"
-      },
-      {
-        "nombre": "x102 Ne",
-        "cod": "x102 Ne",
-        "detalle": "Negro",
-        "cant": 1,
-        "precio": 14000,
-        "imagen1": "url_de_imagen1_x102_Ne",
-        "imagen2": "url_de_imagen2_x102_Ne"
-      },
-      {
-        "nombre": "x102n/B",
-        "cod": "x102n/B",
-        "detalle": "Negro y blanco",
-        "cant": 1,
-        "precio": 14000,
-        "imagen1": "url_de_imagen1_x102n_B",
-        "imagen2": "url_de_imagen2_x102n_B"
-      },
-      {
-        "nombre": "303 Ca",
-        "cod": "303 Ca",
-        "detalle": "Café",
-        "cant": 1,
-        "precio": 15000,
-        "imagen1": "url_de_imagen1_303_Ca",
-        "imagen2": "url_de_imagen2_303_Ca"
-      },
-      {
-        "nombre": "303 Ne",
-        "cod": "303 Ne",
-        "detalle": "Negro",
-        "cant": 1,
-        "precio": 15000,
-        "imagen1": "url_de_imagen1_303_Ne",
-        "imagen2": "url_de_imagen2_303_Ne"
-      }
+    "bolsos":[
+     {
+      "Nombre ": "LARRIS",
+      "COD ": "T302-CF",
+      "Detalle ": "Cafe",
+      "Cant": 2,
+      "Precio ": 13500
+     },
+     {
+      "Nombre ": "LARRIS",
+      "COD ": "T302-BE",
+      "Detalle ": "Beige",
+      "Cant": 2,
+      "Precio ": 13500
+     },
+     {
+      "Nombre ": "MAGNUS",
+      "COD ": "T307-NE",
+      "Detalle ": "Negro",
+      "Cant": 1,
+      "Precio ": 13500
+     },
+     {
+      "Nombre ": "MAGNUS",
+      "COD ": "T307-RS",
+      "Detalle ": "Rosado",
+      "Cant": 1,
+      "Precio ": 13500
+     },
+     {
+      "Nombre ": "PIA",
+      "COD ": "T308-CF",
+      "Detalle ": "Café",
+      "Cant": 2,
+      "Precio ": 13500
+     },
+     {
+      "Nombre ": "PIA",
+      "COD ": "T308-RS",
+      "Detalle ": "Rosado",
+      "Cant": 2,
+      "Precio ": 13500
+     },
+     {
+      "Nombre ": "YUKI",
+      "COD ": "T309-CF",
+      "Detalle ": "Café",
+      "Cant": 1,
+      "Precio ": 13500
+     },
+     {
+      "Nombre ": "YUKI",
+      "COD ": "T309-RS",
+      "Detalle ": "Rosado",
+      "Cant": 1,
+      "Precio ": 13500
+     },
+     {
+      "Nombre ": "YUKI",
+      "COD ": "T309-NE",
+      "Detalle ": "Negro",
+      "Cant": 2,
+      "Precio ": 13500
+     },
+     {
+      "Nombre ": "SAIC",
+      "COD ": "T313-NE",
+      "Detalle ": "Negro",
+      "Cant": 1,
+      "Precio ": 13500
+     },
+     {
+      "Nombre ": "SAIC",
+      "COD ": "T313-BL",
+      "Detalle ": "Blanco",
+      "Cant": 1,
+      "Precio ": 13500
+     },
+     {
+      "Nombre ": "SAIC",
+      "COD ": "T313-CF",
+      "Detalle ": "Café",
+      "Cant": 2,
+      "Precio ": 13500
+     },
+     {
+      "Nombre ": "VALTERI",
+      "COD ": "T314-RS",
+      "Detalle ": "Rosado",
+      "Cant": 1,
+      "Precio ": 11500
+     },
+     {
+      "Nombre ": "VALTERI",
+      "COD ": "T314-BE",
+      "Detalle ": "Beige",
+      "Cant": 1,
+      "Precio ": 11500
+     },
+     {
+      "Nombre ": "VALTERI",
+      "COD ": "T314-CF",
+      "Detalle ": "Café",
+      "Cant": 1,
+      "Precio ": 11500
+     },
+     {
+      "Nombre ": "PIERE",
+      "COD ": "T340-NE",
+      "Detalle ": "Negro",
+      "Cant": 1,
+      "Precio ": 14500
+     },
+     {
+      "Nombre ": "PIERE",
+      "COD ": "T340-RS",
+      "Detalle ": "Rosado",
+      "Cant": 1,
+      "Precio ": 14500
+     },
+     {
+      "Nombre ": "PIERE",
+      "COD ": "T340-CF",
+      "Detalle ": "Café",
+      "Cant": 1,
+      "Precio ": 14500
+     },
+     {
+      "Nombre ": "DIER3",
+      "COD ": "R109-CF",
+      "Detalle ": "Café",
+      "Cant": 2,
+      "Precio ": 10000
+     },
+     {
+      "Nombre ": "DIER3",
+      "COD ": "R109-BE",
+      "Detalle ": "Beige",
+      "Cant": 1,
+      "Precio ": 10000
+     },
+     {
+      "Nombre ": "DIER3",
+      "COD ": "R109-BL",
+      "Detalle ": "Blanco",
+      "Cant": 1,
+      "Precio ": 10000
+     },
+     {
+      "Nombre ": "HULI",
+      "COD ": "R2-CF",
+      "Detalle ": "Café",
+      "Cant": 2,
+      "Precio ": 10500
+     },
+     {
+      "Nombre ": "HULI",
+      "COD ": "R2-RS",
+      "Detalle ": "Rosado",
+      "Cant": 1,
+      "Precio ": 10500
+     },
+     {
+      "Nombre ": "HULI",
+      "COD ": "R2-NE",
+      "Detalle ": "Negro",
+      "Cant": 1,
+      "Precio ": 10500
+     },
+     {
+      "Nombre ": "CHARLES",
+      "COD ": "R98-AZ",
+      "Detalle ": "Azul",
+      "Cant": 1,
+      "Precio ": 13500
+     },
+     {
+      "Nombre ": "CHARLES",
+      "COD ": "R98-NE",
+      "Detalle ": "Negro",
+      "Cant": 1,
+      "Precio ": 13500
+     },
+     {
+      "Nombre ": "CHARLES",
+      "COD ": "R98-GR",
+      "Detalle ": "Gris",
+      "Cant": 1,
+      "Precio ": 13500
+     },
+     {
+      "Nombre ": "ALEXA",
+      "COD ": "R49-BL",
+      "Detalle ": "Blanco",
+      "Cant": 1,
+      "Precio ": 13500
+     },
+     {
+      "Nombre ": "ALEXA",
+      "COD ": "R49-BE",
+      "Detalle ": "Beige",
+      "Cant": 1,
+      "Precio ": 13500
+     },
+     {
+      "Nombre ": "ALEXA",
+      "COD ": "R49-CF",
+      "Detalle ": "Café",
+      "Cant": 2,
+      "Precio ": 13500
+     },
+     {
+      "Nombre ": "VERSA",
+      "COD ": "R-20",
+      "Detalle ": "ROSADO",
+      "Cant": 1,
+      "Precio ": 13500
+     },
+     {
+      "Nombre ": "LEWIS",
+      "COD ": "R-37",
+      "Detalle ": "Bolso café de espalda",
+      "Cant": 2,
+      "Precio ": 16900
+     },
+     {
+      "Nombre ": "R42 Bl",
+      "COD ": "R42 Bl",
+      "Detalle ": "Blanco",
+      "Cant": 1,
+      "Precio ": 12000
+     },
+     {
+      "Nombre ": "R42 Li",
+      "COD ": "R42 Li",
+      "Detalle ": "Lila",
+      "Cant": 1,
+      "Precio ": 12000
+     },
+     {
+      "Nombre ": "Fashion",
+      "COD ": "Fasion",
+      "Detalle ": "Camello",
+      "Cant": 2,
+      "Precio ": 14000
+     },
+     {
+      "Nombre ": "Golden",
+      "COD ": "Golden",
+      "Detalle ": "Blanco",
+      "Cant": 1,
+      "Precio ": 16500
+     },
+     {
+      "Nombre ": "Man13 Az",
+      "COD ": "Man13 Az",
+      "Detalle ": "Azul",
+      "Cant": 1,
+      "Precio ": 13500
+     },
+     {
+      "Nombre ": "Man13 Ne",
+      "COD ": "Man13 Ne",
+      "Detalle ": "Negro",
+      "Cant": 1,
+      "Precio ": 13500
+     },
+     {
+      "Nombre ": "Elite",
+      "COD ": "Elite",
+      "Detalle ": "Café de espalda",
+      "Cant": 2,
+      "Precio ": 15500
+     },
+     {
+      "Nombre ": "322 Caf",
+      "COD ": "322 Caf",
+      "Detalle ": "Café",
+      "Cant": 1,
+      "Precio ": 15500
+     },
+     {
+      "Nombre ": "322 Bl",
+      "COD ": "322 Bl",
+      "Detalle ": "Blanco",
+      "Cant": 1,
+      "Precio ": 15500
+     },
+     {
+      "Nombre ": "323 Cel",
+      "COD ": "323 Cel",
+      "Detalle ": "Celeste",
+      "Cant": 1,
+      "Precio ": 15000
+     },
+     {
+      "Nombre ": "323 Caf",
+      "COD ": "323 Caf",
+      "Detalle ": "Café",
+      "Cant": 1,
+      "Precio ": 15000
+     },
+     {
+      "Nombre ": "323 Ne",
+      "COD ": "323 Ne",
+      "Detalle ": "Negro",
+      "Cant": 1,
+      "Precio ": 15000
+     },
+     {
+      "Nombre ": "323 Nu",
+      "COD ": "323 Nu",
+      "Detalle ": "Nude",
+      "Cant": 1,
+      "Precio ": 15000
+     },
+     {
+      "Nombre ": "325 Cf",
+      "COD ": "325 Cf",
+      "Detalle ": "Café",
+      "Cant": 1,
+      "Precio ": 14000
+     },
+     {
+      "Nombre ": "325 Bl",
+      "COD ": "325 Bl",
+      "Detalle ": "Blanco",
+      "Cant": 1,
+      "Precio ": 14000
+     },
+     {
+      "Nombre ": "325 Ne",
+      "COD ": "325 Ne",
+      "Detalle ": "Negro",
+      "Cant": 1,
+      "Precio ": 14000
+     },
+     {
+      "Nombre ": "x102 Ne",
+      "COD ": "x102 Ne",
+      "Detalle ": "Negro",
+      "Cant": 1,
+      "Precio ": 14000
+     },
+     {
+      "Nombre ": "x102n\/B",
+      "COD ": "x102n\/B",
+      "Detalle ": "Negro y blanco",
+      "Cant": 1,
+      "Precio ": 14000
+     },
+     {
+      "Nombre ": "303 Ca",
+      "COD ": "303 Ca",
+      "Detalle ": "Café",
+      "Cant": 1,
+      "Precio ": 15000
+     },
+     {
+      "Nombre ": "303 Ne",
+      "COD ": "303 Ne",
+      "Detalle ": "Negro",
+      "Cant": 1,
+      "Precio ": 15000
+     }
     ]
-  }
+    }
