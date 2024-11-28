@@ -675,7 +675,7 @@ a {
     width: 100%;
     padding: 45px;
     display: flex;
-    background-image: url('/assets/img/blue-mountain-bg.jpg');
+    background-image: url("/assets/img/blue-mountain-bg.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
