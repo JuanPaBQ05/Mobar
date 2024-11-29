@@ -39,6 +39,70 @@ function OnError(jqXHR, textStatus, errorThrown) {
   alert(`Error al cargar los datos: ${errorThrown}`);
 }
 
+
+function cargarCatalogo(tipo) {
+  try {
+    let catalogContainer = document.getElementById("catalog-container-id");
+    catalogContainer.innerHTML = "";
+    let card;
+
+    // Conjunto para almacenar las primeras 3 letras únicas
+    let nombresProcesados = new Set();
+
+    // Recorrer los datos y generar tarjetas dinámicamente
+    datos.bolsos.forEach(bolso => {
+      // Obtener las primeras 3 letras del nombre
+      let primerasTresLetras = bolso.nombre.substring(0, 3).toLowerCase();
+
+      // Si ya existen en el conjunto, ignorar este bolso
+      if (nombresProcesados.has(primerasTresLetras)) {
+        return; // No añadir al catálogo
+      }
+
+      // Agregar las primeras 3 letras al conjunto
+      nombresProcesados.add(primerasTresLetras);
+
+      // Crear la tarjeta del bolso
+      card = `
+          <div class="col-md-4 col-sm-6 product-item">
+    <div class="card-catalog ${bolso.imagen2 === "valor" ? "single-image" : ""}">
+        <div class="card h-100">
+            <div class="card-image">
+                <!-- Primera imagen -->
+                <img src="${bolso.imagen1}" alt="${bolso.nombre}" class="main-image">
+                <!-- Segunda imagen si existe -->
+                ${bolso.imagen2 !== "valor" ? `<img src="${bolso.imagen2}" alt="${bolso.nombre}" class="second-image">` : ""}
+                <div class="card-overlay">
+                    <div>
+                        <i class="bi bi-bag-heart"></i>
+                        <span class="tooltip">Añadir a deseados</span>
+                    </div>
+                    <div>
+                        <i class="bi bi-eye"></i>
+                        <span class="tooltip">Ver producto</span>
+                    </div>
+                </div>
+            </div>
+            <div class="card-body">
+                <p class="card-description">${bolso.nombre}</p>
+                <p class="card-price text-success">₡${bolso.precio}</p>
+                <button class="btn btn-primary btn-cart">Añadir al carrito</button>
+            </div>
+        </div>
+    </div>
+</div>
+          `;
+
+      // Insertar la tarjeta en el contenedor
+      catalogContainer.innerHTML += card;
+    });
+
+  } catch (error) {
+    alert(`Error al generar el catálogo: ${error}`);
+  }
+}
+
+/*
 function cargarCatalogo(tipo) {
   try {
     let catalogContainer = document.getElementById("catalog-container-id");
@@ -85,7 +149,7 @@ function cargarCatalogo(tipo) {
   } catch (error) {
     alert(`Error al generar el catálogo: ${error}`);
   }
-}
+}*/
 
 
 /*

@@ -494,7 +494,7 @@ a {
 }
 
 .card-description {
-    font-size: 0.9rem;
+    font-size: 1.5rem;
     color: #555;
     margin-bottom: 10px;
 }
@@ -974,14 +974,14 @@ a {
 
 /* Sección de filtros */
 .filter-section {
+    position: sticky; 
+    top: 0; 
     border-right: 1px solid #ccc;
     padding: 15px;
-    position: sticky; /* Hace que el filtro se mantenga visible */
-    top: 0; /* Se pega en la parte superior */
-    height: fit-content; /* Asegura que la altura sea solo la necesaria para su contenido */
-    background-color: #fff; /* Fondo para que sea claro y no se mezcle con el contenido */
-    z-index: 10; /* Se asegura de que esté por encima de otros elementos si es necesario */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Opcional: sombra para destacar */
+    height: fit-content; 
+    background-color: #fff; 
+    z-index: 10;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
 }
 
 /* Estilos adicionales para los filtros */
