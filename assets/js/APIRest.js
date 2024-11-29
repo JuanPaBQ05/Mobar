@@ -18,13 +18,13 @@ function CallServiceMenujq(tipo) {
 function CallServiceMenujq(tipo) {
   var uriServer = "https://juanpabq05.github.io/Mobar/assets/datos/bolsos.json";
   $.ajax({
-      url: uriServer,
-      type: "get",
-      dataType: "json",
-      success: function (data, tipo) {
-          OnSuccess(data, tipo); // Pasa el tipo como parámetro
-      },
-      error: OnError
+    url: uriServer,
+    type: "get",
+    dataType: "json",
+    success: function (data, tipo) {
+      OnSuccess(data, tipo); // Pasa el tipo como parámetro
+    },
+    error: OnError
   });
 }
 
@@ -39,51 +39,51 @@ function OnError(jqXHR, textStatus, errorThrown) {
   alert(`Error al cargar los datos: ${errorThrown}`);
 }
 
-function cargarCatalogo() {
+function cargarCatalogo(tipo) {
   try {
-      let catalogContainer = document.getElementById("catalog-container-id");
-      catalogContainer.innerHTML = ""; 
-      let card;
+    let catalogContainer = document.getElementById("catalog-container-id");
+    catalogContainer.innerHTML = "";
+    let card;
 
-      // Recorrer los datos y generar tarjetas dinámicamente
-      datos.bolsos.forEach(bolso => {
-          card = "";
-          card = `
+    // Recorrer los datos y generar tarjetas dinámicamente
+    datos.bolsos.forEach(bolso => {
+      card = "";
+      card = `
           <div class="col-md-4 col-sm-6 product-item">
-              <div class="card-catalog">
-                  <div class="card h-100">
-                      <div class="card-image">
-                          <!-- Primera imagen -->
-                          <img src="${bolso.imagen1}" alt="${bolso.Nombre }" class="main-image">
-                          <!-- Segunda imagen si existe -->
-                          ${bolso.imagen2 !== "valor" ? `<img src="${bolso.imagen2}" alt="${bolso.Nombre }" class="second-image">` : ""}
-                          <div class="card-overlay">
-                              <div>
-                                  <i class="bi bi-bag-heart"></i>
-                                  <span class="tooltip">Añadir a deseados</span>
-                              </div>
-                              <div>
-                                  <i class="bi bi-eye"></i>
-                                  <span class="tooltip">Ver producto</span>
-                              </div>
-                          </div>
-                      </div>
-                      <div class="card-body">
-                          <p class="card-description">${bolso.Nombre }</p>
-                          <p class="card-price text-success">₡${bolso.Precio }</p>
-                          <button class="btn btn-primary btn-cart">Añadir al carrito</button>
-                      </div>
-                  </div>
-              </div>
-          </div>
+    <div class="card-catalog ${bolso.imagen2 === "valor" ? "single-image" : ""}">
+        <div class="card h-100">
+            <div class="card-image">
+                <!-- Primera imagen -->
+                <img src="${bolso.imagen1}" alt="${bolso.nombre}" class="main-image">
+                <!-- Segunda imagen si existe -->
+                ${bolso.imagen2 !== "valor" ? `<img src="${bolso.imagen2}" alt="${bolso.nombre}" class="second-image">` : ""}
+                <div class="card-overlay">
+                    <div>
+                        <i class="bi bi-bag-heart"></i>
+                        <span class="tooltip">Añadir a deseados</span>
+                    </div>
+                    <div>
+                        <i class="bi bi-eye"></i>
+                        <span class="tooltip">Ver producto</span>
+                    </div>
+                </div>
+            </div>
+            <div class="card-body">
+                <p class="card-description">${bolso.nombre}</p>
+                <p class="card-price text-success">₡${bolso.precio}</p>
+                <button class="btn btn-primary btn-cart">Añadir al carrito</button>
+            </div>
+        </div>
+    </div>
+</div>
           `;
 
-          // Insertar la tarjeta en el contenedor
-          catalogContainer.innerHTML += card;
-      });
+      // Insertar la tarjeta en el contenedor
+      catalogContainer.innerHTML += card;
+    });
 
   } catch (error) {
-      alert(`Error al generar el catálogo: ${error}`);
+    alert(`Error al generar el catálogo: ${error}`);
   }
 }
 

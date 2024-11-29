@@ -405,6 +405,13 @@ a {
     opacity: 1; 
 }
 
+.card-catalog.single-image .main-image {
+    opacity: 1 !important; 
+}
+
+.card-catalog.single-image .second-image {
+    display: none; 
+}
 
 .card-catalog .card-image .card-overlay {
     position: absolute;
@@ -969,14 +976,25 @@ a {
 .filter-section {
     border-right: 1px solid #ccc;
     padding: 15px;
+    position: sticky; /* Hace que el filtro se mantenga visible */
+    top: 0; /* Se pega en la parte superior */
+    height: fit-content; /* Asegura que la altura sea solo la necesaria para su contenido */
+    background-color: #fff; /* Fondo para que sea claro y no se mezcle con el contenido */
+    z-index: 10; /* Se asegura de que esté por encima de otros elementos si es necesario */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Opcional: sombra para destacar */
 }
 
+/* Estilos adicionales para los filtros */
 .filter {
     margin-bottom: 20px;
 }
 
 .filter h3 {
     margin-bottom: 10px;
+}
+
+.filter input[type="range"] {
+    width: 100%;
 }
 
 /* Productos */
