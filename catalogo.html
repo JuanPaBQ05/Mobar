@@ -9,7 +9,7 @@
     <link rel="apple-touch-icon" href="assets/img/apple-icon.png">
     <link rel="icon" href="assets/Mobar imgs/logo-negro.png" type="image/png">
 
-    
+
 
     <!-- Load fonts style after rendering the layout styles -->
     <link rel="stylesheet"
@@ -162,30 +162,23 @@
                 </div>
 
                 <!-- Product Grid -->
-                <div class="col-md-9 product-grid">
-                    <div class="row">
-                        <div class="col-md-4 col-sm-6 product-item">
-                            <div class="product-card">
-                                <p>Producto 1</p>
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-sm-6 product-item">
-                            <div class="product-card">
-                                <p>Producto 2</p>
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-sm-6 product-item">
-                            <div class="product-card">
-                                <p>Producto 3</p>
-                            </div>
-                        </div>
-                        <!-- Agregar más productos -->
+                <div class="col-md-9 product-grid" id="productos-grid">
+                    <div class="row" id="catalog-container-id">
                     </div>
                 </div>
             </div>
         </div>
 
     </main>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+
+    <!-- Template Main JS File -->
+    <script src="assets/js/dom.js"></script>
+    <script src="assets/js/APIRest.js"></script>
+
+
 </body>
 
 </html>

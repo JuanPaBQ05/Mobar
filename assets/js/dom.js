@@ -1,7 +1,8 @@
+window.onload = initMap;
 window.onload = loadPagina;
 
 function loadPagina() {
-
+    CallServiceMenujq("ALL");
 }
 
 let map, directionsService, directionsRenderer, marker1;
@@ -93,4 +94,3 @@ function calculateAndDisplayRoute(userLocation, storeLocation) {
 
 
 // Inicializar el mapa
-window.onload = initMap;

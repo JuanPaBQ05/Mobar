@@ -357,6 +357,10 @@ a {
 
 /*************** Seccion de catalogo ***************/
 
+
+
+
+
 .card-catalog .card {
     overflow: hidden;
     border-radius: 5px;
@@ -379,37 +383,48 @@ a {
     width: 100%;
     height: auto;
     display: block;
-    transition: transform 0.3s ease;
+    transition: opacity 0.3s ease; 
 }
 
-.card-catalog .card:hover img {
-    transform: scale(1.1);
+.card-catalog .card-image .second-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0; 
+    transition: opacity 0.3s ease;
 }
+
+.card-catalog .card:hover .main-image {
+    opacity: 0; 
+}
+
+.card-catalog .card:hover .second-image {
+    opacity: 1; 
+}
+
 
 .card-catalog .card-image .card-overlay {
     position: absolute;
     bottom: 10px;
-    /* Separación desde la parte inferior */
     left: 50%;
-    /* Centra horizontalmente */
     transform: translateX(-50%) translateY(100%);
-    /* Ajusta el centro y oculta inicialmente */
     display: flex;
     justify-content: space-around;
     align-items: center;
     padding: 5px;
     width: 100px;
     background: rgba(255, 255, 255, 0.3);
-    /* Fondo blanco muy transparente */
     color: var(--dark);
     border-radius: 5px;
-    /* Bordes redondeados */
     opacity: 0;
-    /* Ocultar inicialmente */
     transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 .card:hover .card-overlay {
+    background-color: white;
     opacity: 1;
     transform: translateX(-50%) translateY(0);
 }

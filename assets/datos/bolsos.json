@@ -1,576 +1,576 @@
 {
   "bolsos": [
     {
-      "Nombre ": "LARRIS",
-      "Cant": 5,
-      "Precio ": 13500,
       "imagen1": "valor",
       "imagen2": "valor",
       "imagen3": "valor",
       "color": "Cafe",
       "detalle": "valor predeterminado",
-      "clasificacion": "valor predeterminado"
+      "clasificacion": "valor predeterminado",
+      "nombre": "LARRIS",
+      "precio": 13500,
+      "cantidad": 5
     },
     {
-      "Nombre ": "LARRIS",
-      "Cant": 8,
-      "Precio ": 13500,
       "imagen1": "valor",
       "imagen2": "valor",
       "imagen3": "valor",
       "color": "Beige",
       "detalle": "valor predeterminado",
-      "clasificacion": "valor predeterminado"
+      "clasificacion": "valor predeterminado",
+      "nombre": "LARRIS",
+      "precio": 13500,
+      "cantidad": 8
     },
     {
-      "Nombre ": "MAGNUS",
-      "Cant": 3,
-      "Precio ": 13500,
       "imagen1": "valor",
       "imagen2": "valor",
       "imagen3": "valor",
       "color": "Negro",
       "detalle": "valor predeterminado",
-      "clasificacion": "valor predeterminado"
+      "clasificacion": "valor predeterminado",
+      "nombre": "MAGNUS",
+      "precio": 13500,
+      "cantidad": 3
     },
     {
-      "Nombre ": "MAGNUS",
-      "Cant": 5,
-      "Precio ": 13500,
       "imagen1": "valor",
       "imagen2": "valor",
       "imagen3": "valor",
       "color": "Rosado",
       "detalle": "valor predeterminado",
-      "clasificacion": "valor predeterminado"
+      "clasificacion": "valor predeterminado",
+      "nombre": "MAGNUS",
+      "precio": 13500,
+      "cantidad": 5
     },
     {
-      "Nombre ": "PIA",
-      "Cant": 5,
-      "Precio ": 13500,
       "imagen1": "assets/bolsos/piacafe.png",
       "imagen2": "valor",
       "imagen3": "valor",
       "color": "Café",
       "detalle": "Son de cuero sintético con correa gruesa de tela, con carterita y portallaves,",
-      "clasificacion": "largo"
+      "clasificacion": "largo",
+      "nombre": "PIA",
+      "precio": 13500,
+      "cantidad": 5
     },
     {
-      "Nombre ": "PIA",
-      "Cant": 3,
-      "Precio ": 13500,
       "imagen1": "assets/bolsos/piarosa.png",
       "imagen2": "valor",
       "imagen3": "valor",
       "color": "Rosado",
       "detalle": "Son de cuero sintético con correa gruesa de tela, con carterita y portallaves,",
-      "clasificacion": "largo"
+      "clasificacion": "largo",
+      "nombre": "PIA",
+      "precio": 13500,
+      "cantidad": 3
     },
     {
-      "Nombre ": "YUKI",
-      "Cant": 5,
-      "Precio ": 13500,
       "imagen1": "valor",
       "imagen2": "valor",
       "imagen3": "valor",
       "color": "Café",
       "detalle": "Son de cuero sintético, con una capacidad media/alta",
-      "clasificacion": "largo"
+      "clasificacion": "largo",
+      "nombre": "YUKI",
+      "precio": 13500,
+      "cantidad": 5
     },
     {
-      "Nombre ": "YUKI",
-      "Cant": 4,
-      "Precio ": 13500,
       "imagen1": "assets/bolsos/yukirosa.png",
       "imagen2": "valor",
       "imagen3": "valor",
       "color": "Rosado",
       "detalle": "Son de cuero sintético, con una capacidad media/alta",
-      "clasificacion": "largo"
+      "clasificacion": "largo",
+      "nombre": "YUKI",
+      "precio": 13500,
+      "cantidad": 4
     },
     {
-      "Nombre ": "YUKI",
-      "Cant": 8,
-      "Precio ": 13500,
       "imagen1": "assets/bolsos/yukinegro.png",
       "imagen2": "valor",
       "imagen3": "valor",
       "color": "Negro",
       "detalle": "Son de cuero sintético, con una capacidad media/alta",
-      "clasificacion": "largo"
+      "clasificacion": "largo",
+      "nombre": "YUKI",
+      "precio": 13500,
+      "cantidad": 8
     },
     {
-      "Nombre ": "SAIC",
-      "Cant": 3,
-      "Precio ": 13500,
       "imagen1": "valor",
       "imagen2": "valor",
       "imagen3": "valor",
       "color": "Negro",
       "detalle": "valor predeterminado",
-      "clasificacion": "valor predeterminado"
+      "clasificacion": "valor predeterminado",
+      "nombre": "SAIC",
+      "precio": 13500,
+      "cantidad": 3
     },
     {
-      "Nombre ": "SAIC",
-      "Cant": 5,
-      "Precio ": 13500,
       "imagen1": "valor",
       "imagen2": "valor",
       "imagen3": "valor",
       "color": "Blanco",
       "detalle": "valor predeterminado",
-      "clasificacion": "valor predeterminado"
+      "clasificacion": "valor predeterminado",
+      "nombre": "SAIC",
+      "precio": 13500,
+      "cantidad": 5
     },
     {
-      "Nombre ": "SAIC",
-      "Cant": 2,
-      "Precio ": 13500,
       "imagen1": "valor",
       "imagen2": "valor",
       "imagen3": "valor",
       "color": "Café",
       "detalle": "valor predeterminado",
-      "clasificacion": "valor predeterminado"
+      "clasificacion": "valor predeterminado",
+      "nombre": "SAIC",
+      "precio": 13500,
+      "cantidad": 2
     },
     {
-      "Nombre ": "VALTERI",
-      "Cant": 5,
-      "Precio ": 11500,
       "imagen1": "assets/bolsos/valteriblanco.png",
       "imagen2": "valor",
       "imagen3": "valor",
       "color": "Rosado",
       "detalle": "valor predeterminado",
-      "clasificacion": "valor predeterminado"
+      "clasificacion": "valor predeterminado",
+      "nombre": "VALTERI",
+      "precio": 11500,
+      "cantidad": 5
     },
     {
-      "Nombre ": "VALTERI",
-      "Cant": 3,
-      "Precio ": 11500,
       "imagen1": "assets/bolsos/valterinude.png",
       "imagen2": "valor",
       "imagen3": "valor",
       "color": "Beige",
       "detalle": "Son de cuero sintético con capacidad media/alta y faja delgada disponoble",
-      "clasificacion": "largo"
+      "clasificacion": "largo",
+      "nombre": "VALTERI",
+      "precio": 11500,
+      "cantidad": 3
     },
     {
-      "Nombre ": "VALTERI",
-      "Cant": 3,
-      "Precio ": 11500,
       "imagen1": "valor",
       "imagen2": "valor",
       "imagen3": "valor",
       "color": "Café",
       "detalle": "Son de cuero sintético con capacidad media/alta y faja delgada disponoble",
-      "clasificacion": "largo"
+      "clasificacion": "largo",
+      "nombre": "VALTERI",
+      "precio": 11500,
+      "cantidad": 3
     },
     {
-      "Nombre ": "PIERE",
-      "Cant": 3,
-      "Precio ": 14500,
       "imagen1": "assets/bolsos/piernegro.png",
       "imagen2": "valor",
       "imagen3": "valor",
       "color": "Negro",
       "detalle": "Son de cuero sintético con capacidad alta, bolso de espalda disponoble en dos estilos",
-      "clasificacion": "espalda"
+      "clasificacion": "espalda",
+      "nombre": "PIERE",
+      "precio": 14500,
+      "cantidad": 3
     },
     {
-      "Nombre ": "PIERE",
-      "Cant": 3,
-      "Precio ": 14500,
       "imagen1": "assets/bolsos/piererosa.png",
       "imagen2": "valor",
       "imagen3": "valor",
       "color": "Rosado",
       "detalle": "Son de cuero sintético con capacidad alta, bolso de espalda disponoble en dos estilos",
-      "clasificacion": "espalda"
+      "clasificacion": "espalda",
+      "nombre": "PIERE",
+      "precio": 14500,
+      "cantidad": 3
     },
     {
-      "Nombre ": "PIERE",
-      "Cant": 1,
-      "Precio ": 14500,
       "imagen1": "assets/bolsos/pierecafe.png",
       "imagen2": "valor",
       "imagen3": "valor",
       "color": "Café",
       "detalle": "Son de cuero sintético con capacidad alta, bolso de espalda disponoble en dos estilos",
-      "clasificacion": "espalda"
+      "clasificacion": "espalda",
+      "nombre": "PIERE",
+      "precio": 14500,
+      "cantidad": 1
     },
     {
-      "Nombre ": "DIER3",
-      "Cant": 2,
-      "Precio ": 10000,
       "imagen1": "assets/bolsos/diercafe.png",
       "imagen2": "valor",
       "imagen3": "valor",
       "color": "Café",
       "detalle": "Son de cuero sintético con descansa brazo de cadena y cuerina,",
-      "clasificacion": "largo"
+      "clasificacion": "largo",
+      "nombre": "DIER3",
+      "precio": 10000,
+      "cantidad": 2
     },
     {
-      "Nombre ": "DIER3",
-      "Cant": 1,
-      "Precio ": 10000,
       "imagen1": "assets/bolsos/dierenude.png",
       "imagen2": "valor",
       "imagen3": "valor",
       "color": "Beige",
       "detalle": "Son de cuero sintético con descansa brazo de cadena y cuerina,",
-      "clasificacion": "largo"
+      "clasificacion": "largo",
+      "nombre": "DIER3",
+      "precio": 10000,
+      "cantidad": 1
     },
     {
-      "Nombre ": "DIER3",
-      "Cant": 1,
-      "Precio ": 10000,
       "imagen1": "valor",
       "imagen2": "valor",
       "imagen3": "valor",
       "color": "Blanco",
       "detalle": "Son de cuero sintético con descansa brazo de cadena y cuerina,",
-      "clasificacion": "largo"
+      "clasificacion": "largo",
+      "nombre": "DIER3",
+      "precio": 10000,
+      "cantidad": 1
     },
     {
-      "Nombre ": "HULI",
-      "Cant": 2,
-      "Precio ": 10500,
       "imagen1": "valor",
       "imagen2": "valor",
       "imagen3": "valor",
       "color": "Café",
       "detalle": "valor predeterminado",
-      "clasificacion": "valor predeterminado"
+      "clasificacion": "valor predeterminado",
+      "nombre": "HULI",
+      "precio": 10500,
+      "cantidad": 2
     },
     {
-      "Nombre ": "HULI",
-      "Cant": 1,
-      "Precio ": 10500,
       "imagen1": "valor",
       "imagen2": "valor",
       "imagen3": "valor",
       "color": "Rosado",
       "detalle": "valor predeterminado",
-      "clasificacion": "valor predeterminado"
+      "clasificacion": "valor predeterminado",
+      "nombre": "HULI",
+      "precio": 10500,
+      "cantidad": 1
     },
     {
-      "Nombre ": "HULI",
-      "Cant": 1,
-      "Precio ": 10500,
       "imagen1": "valor",
       "imagen2": "valor",
       "imagen3": "valor",
       "color": "Negro",
       "detalle": "valor predeterminado",
-      "clasificacion": "valor predeterminado"
+      "clasificacion": "valor predeterminado",
+      "nombre": "HULI",
+      "precio": 10500,
+      "cantidad": 1
     },
     {
-      "Nombre ": "CHARLES",
-      "Cant": 1,
-      "Precio ": 13500,
       "imagen1": "assets/bolsos/charlesazul.png",
       "imagen2": "valor",
       "imagen3": "valor",
       "color": "Azul",
       "detalle": "Ofrece dos formas de uso, de hombro o cangurera",
-      "clasificacion": "largo"
+      "clasificacion": "largo",
+      "nombre": "CHARLES",
+      "precio": 13500,
+      "cantidad": 1
     },
     {
-      "Nombre ": "CHARLES",
-      "Cant": 1,
-      "Precio ": 13500,
       "imagen1": "assets/bolsos/charlesnegro.png",
       "imagen2": "valor",
       "imagen3": "valor",
       "color": "Negro",
       "detalle": "Ofrece dos formas de uso, de hombro o cangurera",
-      "clasificacion": "largo"
+      "clasificacion": "largo",
+      "nombre": "CHARLES",
+      "precio": 13500,
+      "cantidad": 1
     },
     {
-      "Nombre ": "CHARLES",
-      "Cant": 1,
-      "Precio ": 13500,
       "imagen1": "assets/bolsos/charlesgris.png",
       "imagen2": "valor",
       "imagen3": "valor",
       "color": "Gris",
       "detalle": "Ofrece dos formas de uso, de hombro o cangurera",
-      "clasificacion": "largo"
+      "clasificacion": "largo",
+      "nombre": "CHARLES",
+      "precio": 13500,
+      "cantidad": 1
     },
     {
-      "Nombre ": "ALEXA",
-      "Cant": 1,
-      "Precio ": 13500,
       "imagen1": "assets/bolsos/alexacafe.png",
       "imagen2": "valor",
       "imagen3": "valor",
       "color": "Blanco",
       "detalle": "Son de cuero sintético, con faja gruesa",
-      "clasificacion": "largo"
+      "clasificacion": "largo",
+      "nombre": "ALEXA",
+      "precio": 13500,
+      "cantidad": 1
     },
     {
-      "Nombre ": "ALEXA",
-      "Cant": 1,
-      "Precio ": 13500,
       "imagen1": "assets/bolsos/alexanude.png",
       "imagen2": "valor",
       "imagen3": "valor",
       "color": "Beige",
       "detalle": "Son de cuero sintético, con faja gruesa",
-      "clasificacion": "largo"
+      "clasificacion": "largo",
+      "nombre": "ALEXA",
+      "precio": 13500,
+      "cantidad": 1
     },
     {
-      "Nombre ": "ALEXA",
-      "Cant": 2,
-      "Precio ": 13500,
       "imagen1": "assets/bolsos/alexa.png",
       "imagen2": "valor",
       "imagen3": "valor",
       "color": "Café",
       "detalle": "Son de cuero sintético, con faja gruesa",
-      "clasificacion": "largo"
+      "clasificacion": "largo",
+      "nombre": "ALEXA",
+      "precio": 13500,
+      "cantidad": 2
     },
     {
-      "Nombre ": "VERSA",
-      "Cant": 1,
-      "Precio ": 13500,
       "imagen1": "assets/bolsos/versa.png",
       "imagen2": "valor",
       "imagen3": "valor",
       "color": "ROSADO",
       "detalle": "Es de cuero sintético con capacidad alta, bolso de espalda disponoble en un solo estilo",
-      "clasificacion": "espalda"
+      "clasificacion": "espalda",
+      "nombre": "VERSA",
+      "precio": 13500,
+      "cantidad": 1
     },
     {
-      "Nombre ": "LEWIS",
-      "Cant": 2,
-      "Precio ": 16900,
       "imagen1": "valor",
       "imagen2": "valor",
       "imagen3": "valor",
       "color": "Bolso café de espalda",
       "detalle": "valor predeterminado",
-      "clasificacion": "valor predeterminado"
+      "clasificacion": "valor predeterminado",
+      "nombre": "LEWIS",
+      "precio": 16900,
+      "cantidad": 2
     },
     {
-      "Nombre ": "R42 Bl",
-      "Cant": 1,
-      "Precio ": 12000,
       "imagen1": "valor",
       "imagen2": "valor",
       "imagen3": "valor",
       "color": "Blanco",
       "detalle": "valor predeterminado",
-      "clasificacion": "valor predeterminado"
+      "clasificacion": "valor predeterminado",
+      "nombre": "R42 Bl",
+      "precio": 12000,
+      "cantidad": 1
     },
     {
-      "Nombre ": "R42 Li",
-      "Cant": 1,
-      "Precio ": 12000,
       "imagen1": "valor",
       "imagen2": "valor",
       "imagen3": "valor",
       "color": "Lila",
       "detalle": "valor predeterminado",
-      "clasificacion": "valor predeterminado"
+      "clasificacion": "valor predeterminado",
+      "nombre": "R42 Li",
+      "precio": 12000,
+      "cantidad": 1
     },
     {
-      "Nombre ": "Fashion",
-      "Cant": 2,
-      "Precio ": 14000,
       "imagen1": "valor",
       "imagen2": "valor",
       "imagen3": "valor",
       "color": "Camello",
       "detalle": "valor predeterminado",
-      "clasificacion": "valor predeterminado"
+      "clasificacion": "valor predeterminado",
+      "nombre": "Fashion",
+      "precio": 14000,
+      "cantidad": 2
     },
     {
-      "Nombre ": "Golden",
-      "Cant": 1,
-      "Precio ": 16500,
       "imagen1": "assets/bolsos/golden-2.png",
       "imagen2": "assets/bolsos/golden-1.jpg",
       "imagen3": "valor",
       "color": "Blanco",
       "detalle": "Bolso formal de cuerina sintética alta gama, con detalles en dorado y doble bolsa interna, con sus reposadores.",
-      "clasificacion": "largo"
+      "clasificacion": "largo",
+      "nombre": "Golden",
+      "precio": 16500,
+      "cantidad": 1
     },
     {
-      "Nombre ": "Man13 Az",
-      "Cant": 1,
-      "Precio ": 13500,
       "imagen1": "valor",
       "imagen2": "valor",
       "imagen3": "valor",
       "color": "Azul",
       "detalle": "Bolso TOTEBAG, para cualquier ocasión, varias bolsas en su interior y exterior.",
-      "clasificacion": "largo"
+      "clasificacion": "largo",
+      "nombre": "Man13 Az",
+      "precio": 13500,
+      "cantidad": 1
     },
     {
-      "Nombre ": "Man13 Ne",
-      "Cant": 1,
-      "Precio ": 13500,
       "imagen1": "valor",
       "imagen2": "valor",
       "imagen3": "valor",
       "color": "Negro",
       "detalle": "Bolso TOTEBAG, para cualquier ocasión, varias bolsas en su interior y exterior.",
-      "clasificacion": "largo"
+      "clasificacion": "largo",
+      "nombre": "Man13 Ne",
+      "precio": 13500,
+      "cantidad": 1
     },
     {
-      "Nombre ": "Elite",
-      "Cant": 2,
-      "Precio ": 15500,
       "imagen1": "assets/bolsos/Elite.png",
       "imagen2": "assets/bolsos/Elite2.png",
       "imagen3": "valor",
       "color": "Café de espalda",
       "detalle": "Bolso de espalda color café con dos estilos de tela, cuero sintético y cuerina.",
-      "clasificacion": "valor predeterminado"
+      "clasificacion": "valor predeterminado",
+      "nombre": "Elite",
+      "precio": 15500,
+      "cantidad": 2
     },
     {
-      "Nombre ": "322 Caf",
-      "Cant": 1,
-      "Precio ": 15500,
       "imagen1": "valor",
       "imagen2": "valor",
       "imagen3": "valor",
       "color": "Café",
       "detalle": "Bolso de espalda color crema de cuerina, con doble bolsa y sus correas",
-      "clasificacion": "espalda"
+      "clasificacion": "espalda",
+      "nombre": "322 Caf",
+      "precio": 15500,
+      "cantidad": 1
     },
     {
-      "Nombre ": "322 Bl",
-      "Cant": 1,
-      "Precio ": 15500,
       "imagen1": "assets/bolsos/322.png",
       "imagen2": "assets/bolsos/322-2.png",
       "imagen3": "valor",
       "color": "Blanco",
       "detalle": "Bolso de espalda color crema de cuerina, con doble bolsa y sus correas",
-      "clasificacion": "espalda"
+      "clasificacion": "espalda",
+      "nombre": "322 Bl",
+      "precio": 15500,
+      "cantidad": 1
     },
     {
-      "Nombre ": "323 Cel",
-      "Cant": 1,
-      "Precio ": 15000,
       "imagen1": "assets/bolsos/323celeste.jpg",
       "imagen2": "valor",
       "imagen3": "valor",
       "color": "Celeste",
       "detalle": "Bolso estilo largo de cuerina sintéctica con doble color, cierre dorado con su correa delgada para estilo manos libres.",
-      "clasificacion": "largo"
+      "clasificacion": "largo",
+      "nombre": "323 Cel",
+      "precio": 15000,
+      "cantidad": 1
     },
     {
-      "Nombre ": "323 Caf",
-      "Cant": 1,
-      "Precio ": 15000,
       "imagen1": "assets/bolsos/322cafe.jpg",
       "imagen2": "assets/bolsos/322cafe2.jpg",
       "imagen3": "valor",
       "color": "Café",
       "detalle": "Bolso estilo largo de cuerina sintéctica con doble color, cierre dorado con su correa delgada para estilo manos libres.",
-      "clasificacion": "largo"
+      "clasificacion": "largo",
+      "nombre": "323 Caf",
+      "precio": 15000,
+      "cantidad": 1
     },
     {
-      "Nombre ": "323 Ne",
-      "Cant": 1,
-      "Precio ": 15000,
       "imagen1": "valor",
       "imagen2": "valor",
       "imagen3": "valor",
       "color": "Negro",
       "detalle": "valor predeterminado",
-      "clasificacion": "largo"
+      "clasificacion": "largo",
+      "nombre": "323 Ne",
+      "precio": 15000,
+      "cantidad": 1
     },
     {
-      "Nombre ": "323 Nu",
-      "Cant": 1,
-      "Precio ": 15000,
       "imagen1": "valor",
       "imagen2": "valor",
       "imagen3": "valor",
       "color": "Nude",
       "detalle": "Bolso estilo largo de cuerina sintéctica con doble color, cierre dorado con su correa delgada para estilo manos libres.",
-      "clasificacion": "largo"
+      "clasificacion": "largo",
+      "nombre": "323 Nu",
+      "precio": 15000,
+      "cantidad": 1
     },
     {
-      "Nombre ": "325 Cf",
-      "Cant": 1,
-      "Precio ": 14000,
       "imagen1": "assets/bolsos/325.png",
       "imagen2": "valor",
       "imagen3": "valor",
       "color": "Café",
       "detalle": "Bolso estilo largo de cuerina sintéctica, doble cierre de zipper.",
-      "clasificacion": "largo"
+      "clasificacion": "largo",
+      "nombre": "325 Cf",
+      "precio": 14000,
+      "cantidad": 1
     },
     {
-      "Nombre ": "325 Bl",
-      "Cant": 1,
-      "Precio ": 14000,
       "imagen1": "valor",
       "imagen2": "valor",
       "imagen3": "valor",
       "color": "Blanco",
       "detalle": "Bolso estilo largo de cuerina sintéctica, doble cierre de zipper.",
-      "clasificacion": "largo"
+      "clasificacion": "largo",
+      "nombre": "325 Bl",
+      "precio": 14000,
+      "cantidad": 1
     },
     {
-      "Nombre ": "325 Ne",
-      "Cant": 1,
-      "Precio ": 14000,
       "imagen1": "assets/bolsos/325negro.png",
       "imagen2": "valor",
       "imagen3": "valor",
       "color": "Negro",
       "detalle": "Bolso estilo largo de cuerina sintéctica, doble cierre de zipper.",
-      "clasificacion": "largo"
+      "clasificacion": "largo",
+      "nombre": "325 Ne",
+      "precio": 14000,
+      "cantidad": 1
     },
     {
-      "Nombre ": "x102 Ne",
-      "Cant": 1,
-      "Precio ": 14000,
       "imagen1": "assets/bolsos/x102-1.png",
       "imagen2": "assets/bolsos/x102-2.png",
       "imagen3": "valor",
       "color": "Negro",
       "detalle": "Riñonera de moda, textura cuadrículada con brillo, capacidad de almacenamiento alta,",
-      "clasificacion": "largo"
+      "clasificacion": "largo",
+      "nombre": "x102 Ne",
+      "precio": 14000,
+      "cantidad": 1
     },
     {
-      "Nombre ": "x102n/B",
-      "Cant": 1,
-      "Precio ": 14000,
       "imagen1": "valor",
       "imagen2": "valor",
       "imagen3": "valor",
       "color": "Negro y blanco",
       "detalle": "valor predeterminado",
-      "clasificacion": "valor predeterminado"
+      "clasificacion": "valor predeterminado",
+      "nombre": "x102n/B",
+      "precio": 14000,
+      "cantidad": 1
     },
     {
-      "Nombre ": "303 Ca",
-      "Cant": 1,
-      "Precio ": 15000,
       "imagen1": "valor",
       "imagen2": "valor",
       "imagen3": "valor",
       "color": "Café",
       "detalle": "valor predeterminado",
-      "clasificacion": "valor predeterminado"
+      "clasificacion": "valor predeterminado",
+      "nombre": "303 Ca",
+      "precio": 15000,
+      "cantidad": 1
     },
     {
-      "Nombre ": "303 Ne",
-      "Cant": 1,
-      "Precio ": 15000,
       "imagen1": "valor",
       "imagen2": "valor",
       "imagen3": "valor",
       "color": "Negro",
       "detalle": "valor predeterminado",
-      "clasificacion": "valor predeterminado"
+      "clasificacion": "valor predeterminado",
+      "nombre": "303 Ne",
+      "precio": 15000,
+      "cantidad": 1
     }
   ]
 }
