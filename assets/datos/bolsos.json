@@ -34,7 +34,7 @@
       "cantidad": 4
     },
     {
-      "imagen1": "assets/bolsos/yukinegro.png",
+      "imagen1": "assets/bolsos/yukinegro.jpg",
       "imagen2": "valor",
       "imagen3": "valor",
       "color": "Negro",
@@ -122,7 +122,7 @@
       "cantidad": 1
     },
     {
-      "imagen1": "assets/bolsos/charlesazul.png",
+      "imagen1": "assets/bolsos/charlesazul.jpg",
       "imagen2": "valor",
       "imagen3": "valor",
       "color": "Azul",
@@ -133,46 +133,13 @@
       "cantidad": 1
     },
     {
-      "imagen1": "assets/bolsos/charlesnegro.png",
-      "imagen2": "valor",
-      "imagen3": "valor",
-      "color": "Negro",
-      "detalle": "Ofrece dos formas de uso, de hombro o cangurera",
-      "clasificacion": "largo",
-      "nombre": "CHARLES",
-      "precio": 13500,
-      "cantidad": 1
-    },
-    {
-      "imagen1": "assets/bolsos/charlesgris.png",
+      "imagen1": "assets/bolsos/charlesgris.jpg",
       "imagen2": "valor",
       "imagen3": "valor",
       "color": "Gris",
       "detalle": "Ofrece dos formas de uso, de hombro o cangurera",
       "clasificacion": "largo",
       "nombre": "CHARLES",
-      "precio": 13500,
-      "cantidad": 1
-    },
-    {
-      "imagen1": "assets/bolsos/alexacafe.png",
-      "imagen2": "valor",
-      "imagen3": "valor",
-      "color": "Blanco",
-      "detalle": "Son de cuero sintético, con faja gruesa",
-      "clasificacion": "largo",
-      "nombre": "ALEXA",
-      "precio": 13500,
-      "cantidad": 1
-    },
-    {
-      "imagen1": "assets/bolsos/alexanude.png",
-      "imagen2": "valor",
-      "imagen3": "valor",
-      "color": "Beige",
-      "detalle": "Son de cuero sintético, con faja gruesa",
-      "clasificacion": "largo",
-      "nombre": "ALEXA",
       "precio": 13500,
       "cantidad": 1
     },
@@ -210,7 +177,7 @@
       "cantidad": 1
     },
     {
-      "imagen1": "assets/bolsos/Elite.png",
+      "imagen1": "assets/bolsos/Elite1.png",
       "imagen2": "assets/bolsos/Elite2.png",
       "imagen3": "valor",
       "color": "Café de espalda",
