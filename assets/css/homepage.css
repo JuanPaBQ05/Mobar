@@ -23,7 +23,17 @@ h1 {
     font-weight: 600;
 }
 
+.offcanvas-backdrop {
+    background-color: rgba(0, 0, 0, 0.5); 
+}
 
+body.offcanvas-open {
+    overflow: hidden; 
+}
+
+.offcanvas {
+    z-index: 1045 !important; 
+}
 
 ul {
     list-style: none;
@@ -143,7 +153,6 @@ a {
         padding-bottom: 5px;
         transition: color 0.3s ease;
     }
-
     .nav-item::after {
         content: '';
         position: absolute;
@@ -163,21 +172,6 @@ a {
         width: 100%;
     }
 
-    .navbar-nav .dropdown:hover .dropdown-menu {
-        display: block;
-        opacity: 1;
-        /* Asegura que sea visible */
-        visibility: visible;
-    }
-
-    .navbar-nav .dropdown .dropdown-menu {
-        display: none;
-        opacity: 0;
-        visibility: hidden;
-        /* Evita interacción accidental */
-        transition: opacity 0.3s ease, visibility 0.3s ease;
-    }
-
     .navbar-nav .dropdown:hover>.nav-link {
         font-weight: bold;
     }
@@ -190,47 +184,31 @@ a {
     display: flex;
     align-items: center;
     border: 1px solid black;
-    /* Bordes negros */
     border-radius: 50px;
-    /* Bordes redondeados */
     background-color: white;
-    /* Fondo blanco */
     padding: 5px 10px;
 }
 
-/* Estilo del campo de entrada */
 .search-bar input {
     border: none;
-    /* Sin bordes adicionales */
     outline: none;
-    /* Sin borde al hacer clic */
     border-radius: 50px;
-    /* Redondea el input */
     padding: 5px 10px;
     flex: 1;
-    /* Ocupa el espacio disponible */
     font-size: 14px;
 }
 
-/* Estilo del botón de buscar */
 .search-bar .btn-search {
     background: none;
-    /* Sin fondo */
     border: none;
-    /* Sin bordes */
     color: black;
-    /* Ícono negro */
     font-size: 16px;
-    /* Tamaño del ícono */
     cursor: pointer;
-    /* Cambia a puntero */
     padding: 5px;
 }
 
-/* Cambios al hacer hover en el botón */
 .search-bar .btn-search:hover {
     color: var(--primary);
-    /* Cambia el color al hacer hover */
 }
 
 #navbar-principal-toggler {
@@ -240,17 +218,11 @@ a {
     margin-left: 2rem;
 }
 
-
-
-
 #navbar-principal .navbar-brand img {
     width: 130px;
     height: 110px;
 
 }
-
-
-
 
 .shopping-kart {
     position: relative;
@@ -1014,7 +986,109 @@ a {
     text-align: center;
 }
 
+/**********-------------------------------------
+-----------------------------Section Services ----------------------
+----------------------------------------*/
 
+.service-main h1{
+    font-family: var(--thir-font);
+    margin: 1.5rem;
+}
+
+
+/* Formulario General */
+.reservation-form {
+    background-color: var(--forth);
+    color: #ffffff;
+    padding: 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.reservation-form .form-control {
+    background-color: #333333;
+    border-color: solid var(--light);
+    color: var(--light);
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.reservation-form input::placeholder{
+    color: var(--light);
+}
+
+.reservation-form .form-control:focus {
+    border-color: #f39c12;
+    outline: none;
+    background-color: #444444;
+}
+
+.reservation-form label {
+    font-weight: bold;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.gender-container{
+    border-radius: 5px;
+}
+
+.reservation-form .gender-group {
+    display: flex;
+    justify-content: left;
+}
+
+.reservation-form .gender-group input {
+    margin-right: 12px;
+    cursor: pointer;
+}
+
+.reservation-form .gender-group label {
+    color: #ffffff;
+    margin-right: 50px;
+}
+
+.reservation-form select {
+    background-color: #333333;
+    border: 1px solid #444444;
+    color: #ffffff;
+    border-radius: 6px;
+    padding: 10px;
+    width: 100%;
+}
+
+#education{
+    height: 150px;
+}
+.reservation-form button {
+    background-color: #f39c12;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+.reservation-form button:hover {
+    background-color: #e67e22;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .reservation-form .row {
+        flex-direction: column;
+    }
+
+    .reservation-form .col-md-6 {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+}
 
 /***-----------
 ------------ Section Footer ----------

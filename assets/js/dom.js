@@ -92,5 +92,36 @@ function calculateAndDisplayRoute(userLocation, storeLocation) {
     );
 }
 
+function calculateAge() {
+    const birthDate = new Date(document.getElementById('birthDate').value);
+    const today = new Date();
+    let age = today.getFullYear() - birthDate.getFullYear();
+    const monthDiff = today.getMonth() - birthDate.getMonth();
+    if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthDate.getDate())) {
+        age--;
+    }
+    document.getElementById('age').value = age;
+}
 
-// Inicializar el mapa
+function emailCliente() {
+    let parms = {
+        name: document.getElementById("fullName").value, 
+        email: document.getElementById("email").value,   
+        genre: document.querySelector('input[name="gender"]:checked').value, 
+        date: document.getElementById("birthDate").value 
+    };
+
+    //Validar que todos los valores se hayan llenado correctamente
+    if (!parms.name || !parms.email || !parms.genre || !parms.date) {
+        alert("Por favor, completa todos los campos del formulario.");
+        return;
+    }
+
+    console.log(parms); 
+
+    enviarEmail(parms);
+}
+
+function enviarEmail(parms) {
+    emailjs.send("service_4qljfrf","template_dw4makc",parms).then(alert("Email enviado"));
+}

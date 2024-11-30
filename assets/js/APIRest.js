@@ -22,15 +22,14 @@ function CallServiceMenujq(tipo) {
     type: "get",
     dataType: "json",
     success: function (data, tipo) {
-      OnSuccess(data, tipo); // Pasa el tipo como parámetro
+      OnSuccess(data, tipo); 
     },
     error: OnError
   });
 }
 
-// Función de éxito al cargar el JSON
 function OnSuccess(data, tipo) {
-  datos = data; // Almacena los datos globalmente
+  datos = data; 
   cargarCatalogo(tipo);
 }
 
@@ -46,23 +45,17 @@ function cargarCatalogo(tipo) {
     catalogContainer.innerHTML = "";
     let card;
 
-    // Conjunto para almacenar las primeras 3 letras únicas
     let nombresProcesados = new Set();
 
-    // Recorrer los datos y generar tarjetas dinámicamente
     datos.bolsos.forEach(bolso => {
-      // Obtener las primeras 3 letras del nombre
       let primerasTresLetras = bolso.nombre.substring(0, 3).toLowerCase();
 
-      // Si ya existen en el conjunto, ignorar este bolso
       if (nombresProcesados.has(primerasTresLetras)) {
-        return; // No añadir al catálogo
+        return; 
       }
 
-      // Agregar las primeras 3 letras al conjunto
       nombresProcesados.add(primerasTresLetras);
 
-      // Crear la tarjeta del bolso
       card = `
           <div class="col-md-4 col-sm-6 product-item">
     <div class="card-catalog ${bolso.imagen2 === "valor" ? "single-image" : ""}">
@@ -101,6 +94,8 @@ function cargarCatalogo(tipo) {
     alert(`Error al generar el catálogo: ${error}`);
   }
 }
+
+
 
 /*
 function cargarCatalogo(tipo) {
@@ -198,3 +193,148 @@ function cargarMenu(tipo) {
 }
   */
 
+function CallServiceMenuInicio() {
+  var uriServer = "https://juanpabq05.github.io/Mobar/assets/datos/bolsos.json";
+  $.ajax({
+    url: uriServer,
+    type: "get",
+    dataType: "json",
+    success: function (data) {
+      OnSuccessInicio(data); 
+    },
+    error: OnErrorInicio 
+  });
+}
+
+function OnSuccessInicio(data) {
+  datos = data; 
+  cargarInicio(); 
+}
+
+function OnErrorInicio(jqXHR, textStatus, errorThrown) {
+  alert(`Error al cargar los datos: ${errorThrown}`);
+}
+
+
+function CallServiceMenuInicio() {
+  var uriServer = "https://juanpabq05.github.io/Mobar/assets/datos/bolsos.json";
+  $.ajax({
+    url: uriServer,
+    type: "get",
+    dataType: "json",
+    success: function (data) {
+      OnSuccessInicio(data); 
+    },
+    error: OnErrorInicio 
+  });
+}
+
+function OnSuccessInicio(data) {
+  datos = data; 
+  cargarInicio(); 
+}
+
+function OnErrorInicio(jqXHR, textStatus, errorThrown) {
+  alert(`Error al cargar los datos: ${errorThrown}`);
+}
+
+function CallServiceMenuInicio() {
+  var uriServer = "https://juanpabq05.github.io/Mobar/assets/datos/bolsos.json";
+  $.ajax({
+    url: uriServer,
+    type: "get",
+    dataType: "json",
+    success: function (data) {
+      OnSuccessInicio(data); 
+    },
+    error: OnErrorInicio 
+  });
+}
+function OnSuccessInicio(data) {
+  datos = data; 
+  cargarInicio(); 
+}
+
+function OnErrorInicio(jqXHR, textStatus, errorThrown) {
+  alert(`Error al cargar los datos: ${errorThrown}`);
+}
+
+
+function cargarInicio() {
+  try {
+    let catalogContainer = document.getElementById("catalog-container-index");
+    catalogContainer.innerHTML = ""; 
+
+    let card;
+    let nombresProcesados = new Set(); // Rastrea las primeras tres letras ya procesadas
+    let productosMostrados = 0; // Contador para limitar a 3 productos
+
+    for (const bolso of datos.bolsos) {
+      // Verificar si el bolso tiene una imagen válida
+      if (!bolso.imagen1 || bolso.imagen1 === "valor") {
+        continue; // Ignorar este bolso si no tiene una imagen válida
+      }
+
+      // Obtener las primeras tres letras del nombre
+      let primerasTresLetras = bolso.nombre.substring(0, 3).toLowerCase();
+
+      // Verificar si ya se procesó un bolso con estas tres letras
+      if (nombresProcesados.has(primerasTresLetras)) {
+        continue; // Saltar este bolso
+      }
+
+      // Agregar las tres letras al conjunto para evitar duplicados
+      nombresProcesados.add(primerasTresLetras);
+
+      // Crear la tarjeta del producto
+      card = `
+        <div class="col-md-4 col-sm-6 product-item">
+          <div class="card-catalog ${bolso.imagen2 === "valor" ? "single-image" : ""}">
+              <div class="card h-100">
+                  <div class="card-image">
+                      <!-- Primera imagen -->
+                      <img src="${bolso.imagen1}" alt="${bolso.nombre}" class="main-image">
+                      <!-- Segunda imagen si existe -->
+                      ${bolso.imagen2 && bolso.imagen2 !== "valor" ? `<img src="${bolso.imagen2}" alt="${bolso.nombre}" class="second-image">` : ""}
+                      <div class="card-overlay">
+                          <div>
+                              <i class="bi bi-bag-heart"></i>
+                              <span class="tooltip">Añadir a deseados</span>
+                          </div>
+                          <div>
+                              <i class="bi bi-eye"></i>
+                              <span class="tooltip">Ver producto</span>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="card-body">
+                      <p class="card-description">${bolso.nombre}</p>
+                      <p class="card-price text-success">₡${bolso.precio}</p>
+                      <button class="btn btn-primary btn-cart">Añadir al carrito</button>
+                  </div>
+              </div>
+          </div>
+        </div>
+      `;
+
+      // Insertar la tarjeta en el contenedor
+      catalogContainer.innerHTML += card;
+
+      // Incrementar el contador de productos mostrados
+      productosMostrados++;
+
+      // Detener el bucle si ya se mostraron 3 productos
+      if (productosMostrados >= 3) {
+        break; // Salir del bucle
+      }
+    }
+
+    // Opcional: Mensaje si no se encontraron productos válidos
+    if (catalogContainer.innerHTML === "") {
+      catalogContainer.innerHTML = `<p>No hay productos disponibles para mostrar.</p>`;
+    }
+
+  } catch (error) {
+    alert(`Error al cargar el inicio: ${error}`);
+  }
+}

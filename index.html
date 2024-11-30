@@ -6,41 +6,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- Iconos -->
     <link rel="apple-touch-icon" href="assets/img/apple-icon.png">
     <link rel="icon" href="assets/Mobar imgs/logo-negro.png" type="image/png">
 
-    
-
-    <!-- Load fonts style after rendering the layout styles -->
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap">
-    <link rel="stylesheet" href="assets/css/fontawesome.min.css">
-
-
-    <!--Google fonts links-->
+    <!-- Fuentes de Google -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Poppins:wght@100;200;400;500;700;800&family=Send+Flowers&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap">
 
-    <!--Google maps API-->
+    <!-- Google Maps API -->
     <script
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBYhkD0um6SB6piNH9hia0Vpj1HyWQ7p_0&libraries=geometry,places">
         </script>
 
-    <!--Customized Bootstrap Stylesheet -->
-    <!--link rel="stylesheet" href="assets/css/bootstrap.min.css" -->
+    <!-- Bootstrap Stylesheet -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Estilos Personalizados -->
+    <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+    <link rel="stylesheet" href="assets/css/homepage.css">
+
+
+    <!-- Bootstrap JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-
-    <link rel="stylesheet" href="assets/css/homepage.css">
-    <link rel="stylesheet" href="assets/css/templatemo.css">
-    <link rel="stylesheet" href="assets/css/custom.css">
 </head>
 
 <body>
@@ -89,7 +86,7 @@
                 <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
                     aria-labelledby="offcanvasNavbarLabel">
                     <div class="offcanvas-header">
-                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel"> Mobar </h5>
+                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel"> MobarCr </h5>
                         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                     </div>
                     <div class="offcanvas-body" id="nav-links-theme">
@@ -102,8 +99,8 @@
                             </li>
                             <!-- Dropdown para Catálogo -->
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle mx-lg-2" href="catalogo.html" id="catalogoDropdown" role="button"
-                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                <a class="nav-link dropdown-toggle mx-lg-2" href="catalogo.html" id="catalogoDropdown"
+                                    role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     Catálogo
                                 </a>
                                 <ul class="dropdown-menu" aria-labelledby="catalogoDropdown">
@@ -112,7 +109,7 @@
                                 </ul>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link mx-lg-2" href="#">Servicios</a>
+                                <a class="nav-link mx-lg-2" href="services.html">Servicios</a>
                             </li>
                         </ul>
                         <form class="d-flex" role="search">
@@ -209,129 +206,33 @@
                 <h1 class="mb-4 mt-5">Catálogo</h1>
                 <div class="container-fluid">
                     <div class="line-decoration"></div>
-                    <div class="row justify-content-center">
-                        <div class="col-md-3">
-                            <div class="card-catalog" href="">
-                                <div class="card h-100">
-                                    <div class="card-image">
-                                        <img src="assets/Mobar imgs/catalogo1.jpg" alt="Deportivos">
-                                        <img src="assets/Mobar imgs/second-image.png" alt="Deportivos" class="second-image">
-                                        <div class="card-overlay">
-                                            <div>
-                                                <i class="bi bi-bag-heart"></i>
-                                                <span class="tooltip">Añadir a deseados</span>
-                                            </div>
-                                            <div>
-                                                <i class="bi bi-eye"></i>
-                                                <span class="tooltip">Ver producto</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="card-body">
-                                        <p class="card-description">Calzado ideal para actividades deportivas.</p>
-                                        <p class="card-price text-success">$49.99</p>
-                                        <button class="btn btn-primary btn-cart">Añadir al carrito</button>
-                                    </div>
-                                </div>
-                            </div>
+                    <div class="row justify-content-center" id="catalog-container-index">
+                        
+                        
+                    </div>
+                    <div class="col-md-12 see-more-section">
+                        <div class="button-see-more-catalog">
+                            <a class="btn-see-more" href="catalogo.html">Ver más</a>
                         </div>
-                        <div class="col-md-3">
-                            <div class="card-catalog">
-                                <div class="card h-100">
-                                    <div class="card-image">
-                                        <img src="assets/Mobar imgs/catalogo2.jpg" alt="Deportivos">
-                                        <div class="card-overlay">
-                                            <div>
-                                                <i class="bi bi-bag-heart"></i>
-                                                <span class="tooltip">Añadir a deseados</span>
-                                            </div>
-                                            <div>
-                                                <i class="bi bi-eye"></i>
-                                                <span class="tooltip">Ver producto</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="card-body">
-                                        <p class="card-description">Calzado ideal para actividades deportivas.</p>
-                                        <p class="card-price text-success">$49.99</p>
-                                        <button class="btn btn-primary btn-cart">Añadir al carrito</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="card-catalog">
-                                <div class="card h-100">
-                                    <div class="card-image">
-                                        <img src="assets/Mobar imgs/Photoroom_20240808_164406.png" alt="Deportivos">
-                                        <div class="card-overlay">
-                                            <div>
-                                                <i class="bi bi-bag-heart"></i>
-                                                <span class="tooltip">Añadir a deseados</span>
-                                            </div>
-                                            <div>
-                                                <i class="bi bi-eye"></i>
-                                                <span class="tooltip">Ver producto</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="card-body">
-                                        <p class="card-description">Calzado ideal para actividades deportivas.</p>
-                                        <p class="card-price text-success">$49.99</p>
-                                        <button class="btn btn-primary btn-cart">Añadir al carrito</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="card-catalog">
-                                <div class="card h-100">
-                                    <div class="card-image">
-                                        <img src="assets/Mobar imgs/Photoroom_20240808_164406.png" alt="Deportivos">
-                                        
-                                        <div class="card-overlay">
-                                            <div>
-                                                <i class="bi bi-bag-heart"></i>
-                                                <span class="tooltip">Añadir a deseados</span>
-                                            </div>
-                                            <div>
-                                                <i class="bi bi-eye"></i>
-                                                <span class="tooltip">Ver producto</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="card-body">
-                                        <p class="card-description">Calzado ideal para actividades deportivas.</p>
-                                        <p class="card-price text-success">$49.99</p>
-                                        <button class="btn btn-primary btn-cart">Añadir al carrito</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-12 see-more-section">
-                            <div class="button-see-more-catalog">
-                                <a class="btn-see-more" href="catalogo.html">Ver más</a>
-                            </div>
-                        </div>
+                    </div>
 
-                        <div class="col-md-12 justify-content-center p-5">
-                            <div class="about-us-section p-4" id="about-us-homepage">
-                                <div class="row">
-                                    <div class="col-md-6" id="about-us-homepage-image">
-                                        <img src="assets/Mobar imgs/about1.png" alt="Quienes somos">
-                                    </div>
-                                    <div class="col-md-6">
-                                        <article class="" id="about-us-section-info">
-                                            <h2>¿Quiénes somos?</h2>
-                                            <p>
-                                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum, vitae
-                                                saepe asperiores voluptatibus repellendus eaque id culpa? Explicabo,
-                                                architecto consequatur, rerum, sapiente accusantium praesentium odio
-                                                blanditiis perspiciatis fugiat est officiis.
-                                            </p>
-                                            <a class="btn-see-about" href="about.html">Más sobre nosotros</a>
-                                        </article>
-                                    </div>
+                    <div class="col-md-12 justify-content-center p-5">
+                        <div class="about-us-section p-4" id="about-us-homepage">
+                            <div class="row">
+                                <div class="col-md-6" id="about-us-homepage-image">
+                                    <img src="assets/Mobar imgs/about1.png" alt="Quienes somos">
+                                </div>
+                                <div class="col-md-6">
+                                    <article class="" id="about-us-section-info">
+                                        <h2>¿Quiénes somos?</h2>
+                                        <p>
+                                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum, vitae
+                                            saepe asperiores voluptatibus repellendus eaque id culpa? Explicabo,
+                                            architecto consequatur, rerum, sapiente accusantium praesentium odio
+                                            blanditiis perspiciatis fugiat est officiis.
+                                        </p>
+                                        <a class="btn-see-about" href="about.html">Más sobre nosotros</a>
+                                    </article>
                                 </div>
                             </div>
                         </div>
@@ -447,14 +348,14 @@
                 </div>
             </div>
         </footer>
-        
-        
+
+
     </main>
 
-    
-    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-
+    <script src="assets/js/index.js"></script>
+    <script src="assets/js/APIRest.js"></script>
 </body>
 
 
