@@ -266,27 +266,21 @@ function cargarInicio() {
     catalogContainer.innerHTML = ""; 
 
     let card;
-    let nombresProcesados = new Set(); // Rastrea las primeras tres letras ya procesadas
-    let productosMostrados = 0; // Contador para limitar a 3 productos
+    let nombresProcesados = new Set(); 
+    let productosMostrados = 0; 
 
     for (const bolso of datos.bolsos) {
-      // Verificar si el bolso tiene una imagen válida
       if (!bolso.imagen1 || bolso.imagen1 === "valor") {
-        continue; // Ignorar este bolso si no tiene una imagen válida
+        continue; 
       }
 
-      // Obtener las primeras tres letras del nombre
       let primerasTresLetras = bolso.nombre.substring(0, 3).toLowerCase();
 
-      // Verificar si ya se procesó un bolso con estas tres letras
       if (nombresProcesados.has(primerasTresLetras)) {
-        continue; // Saltar este bolso
+        continue; 
       }
-
-      // Agregar las tres letras al conjunto para evitar duplicados
       nombresProcesados.add(primerasTresLetras);
 
-      // Crear la tarjeta del producto
       card = `
         <div class="col-md-4 col-sm-6 product-item">
           <div class="card-catalog ${bolso.imagen2 === "valor" ? "single-image" : ""}">
@@ -317,19 +311,14 @@ function cargarInicio() {
         </div>
       `;
 
-      // Insertar la tarjeta en el contenedor
       catalogContainer.innerHTML += card;
 
-      // Incrementar el contador de productos mostrados
       productosMostrados++;
 
-      // Detener el bucle si ya se mostraron 3 productos
       if (productosMostrados >= 3) {
-        break; // Salir del bucle
+        break; 
       }
     }
-
-    // Opcional: Mensaje si no se encontraron productos válidos
     if (catalogContainer.innerHTML === "") {
       catalogContainer.innerHTML = `<p>No hay productos disponibles para mostrar.</p>`;
     }
@@ -337,4 +326,91 @@ function cargarInicio() {
   } catch (error) {
     alert(`Error al cargar el inicio: ${error}`);
   }
+}
+
+
+
+
+
+
+function cargarCatalogofiltro(tipo, ordenPrecio) {
+  try {
+    let catalogContainer = document.getElementById("catalog-container-id");
+    catalogContainer.innerHTML = "";
+    let card;
+
+    let nombresProcesados = new Set();
+
+    let bolsosFiltrados = datos.bolsos.filter(bolso => {
+      return tipo === "Todos" || bolso.categoria === tipo;
+    });
+
+    if (ordenPrecio === "asc") {
+      bolsosFiltrados.sort((a, b) => a.precio - b.precio);
+    } else if (ordenPrecio === "desc") {
+      bolsosFiltrados.sort((a, b) => b.precio - a.precio);
+    }
+
+    bolsosFiltrados.forEach(bolso => {
+      let primerasTresLetras = bolso.nombre.substring(0, 3).toLowerCase();
+
+      if (nombresProcesados.has(primerasTresLetras)) {
+        return; 
+      }
+
+      nombresProcesados.add(primerasTresLetras);
+
+      card = `
+          <div class="col-md-4 col-sm-6 product-item">
+            <div class="card-catalog ${bolso.imagen2 === "valor" ? "single-image" : ""}">
+                <div class="card h-100">
+                    <div class="card-image">
+                        <!-- Primera imagen -->
+                        <img src="${bolso.imagen1}" alt="${bolso.nombre}" class="main-image">
+                        <!-- Segunda imagen si existe -->
+                        ${bolso.imagen2 !== "valor" ? `<img src="${bolso.imagen2}" alt="${bolso.nombre}" class="second-image">` : ""}
+                        <div class="card-overlay">
+                            <div>
+                                <i class="bi bi-bag-heart"></i>
+                                <span class="tooltip">Añadir a deseados</span>
+                            </div>
+                            <div>
+                                <i class="bi bi-eye"></i>
+                                <span class="tooltip">Ver producto</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-description">${bolso.nombre}</p>
+                        <p class="card-price text-success">₡${bolso.precio}</p>
+                        <button class="btn btn-primary btn-cart">Añadir al carrito</button>
+                    </div>
+                </div>
+            </div>
+          </div>
+      `;
+
+      catalogContainer.innerHTML += card;
+    });
+  } catch (error) {
+    alert(`Error al generar el catálogo: ${error}`);
+  }
+}
+
+function CallCatalogofiltro(tipo, ordenPrecio) {
+  var uriServer = "https://juanpabq05.github.io/Mobar/assets/datos/bolsos.json";
+  $.ajax({
+    url: uriServer,
+    type: "get",
+    dataType: "json",
+    success: function (data) {
+      OnSuccessfiltro(data, tipo, ordenPrecio); 
+    },
+    error: OnError
+  });
+}
+
+function OnSuccessfiltro(data, tipo, ordenPrecio) {
+  datos = data; 
+  cargarCatalogofiltro(tipo, ordenPrecio);
 }

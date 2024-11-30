@@ -265,26 +265,50 @@ a {
 
 
 .carousel-inner img {
-    max-height: 800px;
+    max-height: 700px;
+}
+
+.carousel-buttons .btn {
+    background-color: var(--primary); 
+    color: var(--dark); 
+    padding: 10px 20px; 
+    font-size: 18px; 
+    font-weight: bold;
+    border-radius: 50px;
+    border: 2px solid transparent;
+    transition: all 0.3s ease-in-out; 
+}
+
+.carousel-buttons .btn:hover {
+    background-color: var(--dark); 
+    color: white; 
+    border: 2px solid var(--primary); 
+    transform: scale(1.1); 
 }
 
 .carousel-buttons {
     position: absolute;
-    top: 80%;
-    left: 50%;
+    top: 80%; 
+    left: 50%; 
     transform: translateX(-50%);
     display: flex;
-    gap: 20px;
-    z-index: 10;
+    gap: 20px; 
+    z-index: 10; 
 }
 
-.carousel-buttons .btn {
-    background-color: var(--primary);
-    color: var(--dark);
-    padding: 10px 20px;
-    font-size: 18px;
-    font-weight: bold;
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: var(--primary); 
+    border-radius: 50%; 
+    padding: 15px; 
+    color: white; 
+    border: 2px solid white; 
+    font-size: 24px; 
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; 
 }
+
+
+
 
 @media (max-width: 780px) {
     .carousel-buttons {
@@ -511,29 +535,23 @@ a {
     border-radius: 2px;
 }
 
+
+
 .card-catalog {
     overflow: hidden;
     border: none;
     border-radius: 5px;
 }
 
-.category-container img {
+.category-card-container .category-container img {
     transition: transform 0.6s ease-in-out, content 0.6s ease-in-out;
     width: 100%;
-    height: auto;
+    height: 400px;
 }
 
 .category-container img:hover {
     transform: scale(1.05);
     transition-duration: 1s;
-    content: url('');
-}
-
-.category-container .card img {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    width: 100%;
-    height: auto;
-    box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.3);
 }
 
 .card img:hover {
@@ -588,6 +606,16 @@ a {
 #about-us-homepage {
     background-color: var(--light);
     border-radius: 10px;
+}
+
+@media (max-width: 780px){
+    #about-us-homepage {
+        width: 100%;
+    }
+    #about-homepage-container{
+        width: 100%;
+    }
+
 }
 
 #about-us-homepage-image {

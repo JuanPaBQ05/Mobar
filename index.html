@@ -27,6 +27,9 @@
     <!-- Bootstrap Stylesheet -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 
     <!-- Estilos Personalizados -->
@@ -72,11 +75,9 @@
                 </div>
                 <div class="header-right">
                     <div class="row justify-content-between">
-
                     </div>
                 </div>
             </nav>
-
             <!-- Navbar o barra de navegación -->
             <nav class="navbar navbar-expand-lg sticky-top bg-light" id="navbar-principal">
                 <a class="navbar-brand mx-3" href="#">
@@ -86,7 +87,7 @@
                 <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
                     aria-labelledby="offcanvasNavbarLabel">
                     <div class="offcanvas-header">
-                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel"> MobarCr </h5>
+                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel"> Mobar </h5>
                         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                     </div>
                     <div class="offcanvas-body" id="nav-links-theme">
@@ -99,17 +100,17 @@
                             </li>
                             <!-- Dropdown para Catálogo -->
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle mx-lg-2" href="catalogo.html" id="catalogoDropdown"
-                                    role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <a class="nav-link dropdown-toggle mx-lg-2" href="catalogo.html" id="catalogoDropdown" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
                                     Catálogo
                                 </a>
                                 <ul class="dropdown-menu" aria-labelledby="catalogoDropdown">
-                                    <li><a class="dropdown-item" href="catalogo.html">Espalda</a></li>
-                                    <li><a class="dropdown-item" href="catalogo.html">Largos</a></li>
+                                    <li><a class="dropdown-item" href="#">Espalda</a></li>
+                                    <li><a class="dropdown-item" href="#">Largos</a></li>
                                 </ul>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link mx-lg-2" href="services.html">Servicios</a>
+                                <a class="nav-link mx-lg-2" href="#">Servicios</a>
                             </li>
                         </ul>
                         <form class="d-flex" role="search">
@@ -181,23 +182,16 @@
                         <div class="row justify-content-center">
                             <div class="col-md-4 category-container text-center">
                                 <div class="card h-100">
-                                    <img src="assets/Mobar imgs/DSC04599-Photoroom.jpg" alt="">
+                                    <img src="assets/bolsos/pierecafe.png" alt="">
                                     <h2 class="mt-3">Bolsos de espalda</h2>
                                 </div>
                             </div>
                             <div class="col-md-4 category-container text-center">
                                 <div class="card h-100">
-                                    <img src="assets/Mobar imgs/DSC04603-Photoroom.jpg" alt="">
-                                    <h2 class="mt-3">Deportivos</h2>
-                                </div>
-                            </div>
-                            <div class="col-md-4 category-container text-center">
-                                <div class="card h-100">
-                                    <img src="assets/Mobar imgs/DSC04675-Photoroom.jpg" alt="">
+                                    <img src="assets/bolsos/x102-1.png" alt="">
                                     <h2 class="mt-3">Largos</h2>
                                 </div>
                             </div>
-
                         </div>
                     </div>
                 </div>
@@ -215,40 +209,29 @@
                             <a class="btn-see-more" href="catalogo.html">Ver más</a>
                         </div>
                     </div>
-
-                    <div class="col-md-12 justify-content-center p-5">
-                        <div class="about-us-section p-4" id="about-us-homepage">
-                            <div class="row">
-                                <div class="col-md-6" id="about-us-homepage-image">
-                                    <img src="assets/Mobar imgs/about1.png" alt="Quienes somos">
-                                </div>
-                                <div class="col-md-6">
-                                    <article class="" id="about-us-section-info">
-                                        <h2>¿Quiénes somos?</h2>
-                                        <p>
-                                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum, vitae
-                                            saepe asperiores voluptatibus repellendus eaque id culpa? Explicabo,
-                                            architecto consequatur, rerum, sapiente accusantium praesentium odio
-                                            blanditiis perspiciatis fugiat est officiis.
-                                        </p>
-                                        <a class="btn-see-about" href="about.html">Más sobre nosotros</a>
-                                    </article>
-                                </div>
-                            </div>
+                </div>
+            </section>
+            <div class="col-md-12 justify-content-center p-5" id="about-homepage-container">
+                <div class="about-us-section p-4" id="about-us-homepage">
+                    <div class="row">
+                        <div class="col-md-6" id="about-us-homepage-image">
+                            <img src="assets/Mobar imgs/about1.png" alt="Quienes somos">
+                        </div>
+                        <div class="col-md-6">
+                            <article class="" id="about-us-section-info">
+                                <h2>¿Quiénes somos?</h2>
+                                <p>
+                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum, vitae
+                                    saepe asperiores voluptatibus repellendus eaque id culpa? Explicabo,
+                                    architecto consequatur, rerum, sapiente accusantium praesentium odio
+                                    blanditiis perspiciatis fugiat est officiis.
+                                </p>
+                                <a class="btn-see-about" href="about.html">Más sobre nosotros</a>
+                            </article>
                         </div>
                     </div>
                 </div>
-            </section>
-            <section class="about py-5">
-                <div class="row justify-content-center">
-                    <div class="col-md-4">
-
-                    </div>
-                    <div class="col-md-4">
-
-                    </div>
-                </div>
-            </section>
+            </div>
         </div>
 
         <footer id="footer" class="bg-dark h-100">

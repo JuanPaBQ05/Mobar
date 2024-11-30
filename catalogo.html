@@ -142,22 +142,30 @@
         <div class="container" id="catalog-body">
             <div class="row">
                 <div class="col-12 text-center">
-                    <h1>Aquí puedes encontrar bolsos, billeteras, mochilas</h1>
+                    <h1>Galeria de bolsos para todos los gustos</h1>
                 </div>
             </div>
             <div class="row justify-content-between">
                 <!-- Sidebar -->
                 <div class="col-md-3 sticky-top filter-section">
-                    <h2>Filtrar</h2>
-                    <div class="filter">
-                        <h3>Availability</h3>
-                        <label><input type="radio" name="availability"> En Existencia (112)</label><br>
-                        <label><input type="radio" name="availability"> Agotado (18)</label>
+                    <div>
+                        <label>
+                            <input type="radio" name="filter-type" value="Todos" checked> Todos
+                        </label>
+                        <label>
+                            <input type="radio" name="filter-type" value="espalda"> Espalda
+                        </label>
+                        <label>
+                            <input type="radio" name="filter-type" value="largo"> Largo
+                        </label>
                     </div>
-                    <div class="filter">
-                        <h3>Price</h3>
-                        <input type="range" min="0" max="74500" step="100" value="0"><br>
-                        <span>₡ 0</span> - <span>₡ 74,500</span>
+                    <h4>Ordenar por Precio:</h4>
+                    <div>
+                        <select id="price-filter">
+                            <option value="default" selected>Seleccione</option>
+                            <option value="asc">Menor a Mayor</option>
+                            <option value="desc">Mayor a Menor</option>
+                        </select>
                     </div>
                 </div>
 

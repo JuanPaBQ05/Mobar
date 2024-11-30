@@ -5,7 +5,28 @@ function loadPagina() {
     CallServiceMenujq("ALL");
 }
 
+
 let map, directionsService, directionsRenderer, marker1;
+
+document.addEventListener("DOMContentLoaded", () => {
+    const tipoRadios = document.querySelectorAll('input[name="filter-type"]');
+    const priceSelect = document.getElementById("price-filter");
+  
+    tipoRadios.forEach(radio => {
+      radio.addEventListener("change", () => {
+        const tipo = document.querySelector('input[name="filter-type"]:checked').value;
+        const ordenPrecio = priceSelect.value;
+        CallCatalogofiltro(tipo, ordenPrecio);
+      });
+    });
+    priceSelect.addEventListener("change", () => {
+      const tipo = document.querySelector('input[name="filter-type"]:checked').value;
+      const ordenPrecio = priceSelect.value;
+      CallCatalogofiltro(tipo, ordenPrecio);
+    });
+  
+    CallCatalogofiltro("Todos", "default");
+  });
 
 /*async function initMap() {
   // The location of Uluru
