@@ -67,17 +67,6 @@
       "cantidad": 3
     },
     {
-      "imagen1": "assets/bolsos/piernegro.png",
-      "imagen2": "valor",
-      "imagen3": "valor",
-      "color": "Negro",
-      "detalle": "Son de cuero sintético con capacidad alta, bolso de espalda disponoble en dos estilos",
-      "clasificacion": "espalda",
-      "nombre": "PIERE",
-      "precio": 14500,
-      "cantidad": 3
-    },
-    {
       "imagen1": "assets/bolsos/piererosa.png",
       "imagen2": "valor",
       "imagen3": "valor",
