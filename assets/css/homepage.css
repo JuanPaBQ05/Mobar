@@ -968,7 +968,8 @@ a {
 
 
 #catalog-body h1 {
-    font-size: 24px;
+    font-family: var(--thir-font);
+    font-size: 35px;
     margin-bottom: 20px;
 }
 
@@ -1013,6 +1014,8 @@ a {
     border-radius: 5px;
     text-align: center;
 }
+
+
 
 /**********-------------------------------------
 -----------------------------Section Services ----------------------

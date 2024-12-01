@@ -183,7 +183,7 @@
             "color": "Blanco",
             "detalle": "Bolso de espalda color crema de cuerina, con doble bolsa y sus correas",
             "clasificacion": "espalda",
-            "nombre": "322 Bl",
+            "nombre": "322",
             "precio": 15500,
             "cantidad": 1
         },
@@ -194,7 +194,7 @@
             "color": "Celeste",
             "detalle": "Bolso estilo largo de cuerina sintéctica con doble color, cierre dorado con su correa delgada para estilo manos libres.",
             "clasificacion": "largo",
-            "nombre": "323 Cel",
+            "nombre": "323",
             "precio": 15000,
             "cantidad": 1
         },
@@ -205,7 +205,7 @@
             "color": "Café",
             "detalle": "Bolso estilo largo de cuerina sintéctica con doble color, cierre dorado con su correa delgada para estilo manos libres.",
             "clasificacion": "largo",
-            "nombre": "323 Caf",
+            "nombre": "323",
             "precio": 15000,
             "cantidad": 1
         },
@@ -216,7 +216,7 @@
             "color": "Café",
             "detalle": "Bolso estilo largo de cuerina sintéctica, doble cierre de zipper.",
             "clasificacion": "largo",
-            "nombre": "325 Cf",
+            "nombre": "325",
             "precio": 14000,
             "cantidad": 1
         },
@@ -227,7 +227,7 @@
             "color": "Negro",
             "detalle": "Bolso estilo largo de cuerina sintéctica, doble cierre de zipper.",
             "clasificacion": "largo",
-            "nombre": "325 Ne",
+            "nombre": "325",
             "precio": 14000,
             "cantidad": 1
         },
@@ -238,7 +238,7 @@
             "color": "Negro",
             "detalle": "Riñonera de moda, textura cuadrículada con brillo, capacidad de almacenamiento alta,",
             "clasificacion": "largo",
-            "nombre": "x102 Ne",
+            "nombre": "x102",
             "precio": 14000,
             "cantidad": 1
         }

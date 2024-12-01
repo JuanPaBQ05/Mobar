@@ -22,14 +22,14 @@ function CallServiceMenujq(tipo) {
     type: "get",
     dataType: "json",
     success: function (data, tipo) {
-      OnSuccess(data, tipo); 
+      OnSuccess(data, tipo);
     },
     error: OnError
   });
 }
 
 function OnSuccess(data, tipo) {
-  datos = data; 
+  datos = data;
   cargarCatalogo(tipo);
 }
 
@@ -51,7 +51,7 @@ function cargarCatalogo(tipo) {
       let primerasTresLetras = bolso.nombre.substring(0, 3).toLowerCase();
 
       if (nombresProcesados.has(primerasTresLetras)) {
-        return; 
+        return;
       }
 
       nombresProcesados.add(primerasTresLetras);
@@ -200,15 +200,15 @@ function CallServiceMenuInicio() {
     type: "get",
     dataType: "json",
     success: function (data) {
-      OnSuccessInicio(data); 
+      OnSuccessInicio(data);
     },
-    error: OnErrorInicio 
+    error: OnErrorInicio
   });
 }
 
 function OnSuccessInicio(data) {
-  datos = data; 
-  cargarInicio(); 
+  datos = data;
+  cargarInicio();
 }
 
 function OnErrorInicio(jqXHR, textStatus, errorThrown) {
@@ -223,15 +223,15 @@ function CallServiceMenuInicio() {
     type: "get",
     dataType: "json",
     success: function (data) {
-      OnSuccessInicio(data); 
+      OnSuccessInicio(data);
     },
-    error: OnErrorInicio 
+    error: OnErrorInicio
   });
 }
 
 function OnSuccessInicio(data) {
-  datos = data; 
-  cargarInicio(); 
+  datos = data;
+  cargarInicio();
 }
 
 function OnErrorInicio(jqXHR, textStatus, errorThrown) {
@@ -245,14 +245,14 @@ function CallServiceMenuInicio() {
     type: "get",
     dataType: "json",
     success: function (data) {
-      OnSuccessInicio(data); 
+      OnSuccessInicio(data);
     },
-    error: OnErrorInicio 
+    error: OnErrorInicio
   });
 }
 function OnSuccessInicio(data) {
-  datos = data; 
-  cargarInicio(); 
+  datos = data;
+  cargarInicio();
 }
 
 function OnErrorInicio(jqXHR, textStatus, errorThrown) {
@@ -263,21 +263,21 @@ function OnErrorInicio(jqXHR, textStatus, errorThrown) {
 function cargarInicio() {
   try {
     let catalogContainer = document.getElementById("catalog-container-index");
-    catalogContainer.innerHTML = ""; 
+    catalogContainer.innerHTML = "";
 
     let card;
-    let nombresProcesados = new Set(); 
-    let productosMostrados = 0; 
+    let nombresProcesados = new Set();
+    let productosMostrados = 0;
 
     for (const bolso of datos.bolsos) {
       if (!bolso.imagen1 || bolso.imagen1 === "valor") {
-        continue; 
+        continue;
       }
 
       let primerasTresLetras = bolso.nombre.substring(0, 3).toLowerCase();
 
       if (nombresProcesados.has(primerasTresLetras)) {
-        continue; 
+        continue;
       }
       nombresProcesados.add(primerasTresLetras);
 
@@ -316,7 +316,7 @@ function cargarInicio() {
       productosMostrados++;
 
       if (productosMostrados >= 3) {
-        break; 
+        break;
       }
     }
     if (catalogContainer.innerHTML === "") {
@@ -328,11 +328,6 @@ function cargarInicio() {
   }
 }
 
-
-
-
-
-
 function cargarCatalogofiltro(tipo, ordenPrecio) {
   try {
     let catalogContainer = document.getElementById("catalog-container-id");
@@ -342,7 +337,7 @@ function cargarCatalogofiltro(tipo, ordenPrecio) {
     let nombresProcesados = new Set();
 
     let bolsosFiltrados = datos.bolsos.filter(bolso => {
-      return tipo === "Todos" || bolso.categoria === tipo;
+      return tipo === "Todos" || bolso.clasificacion === tipo;
     });
 
     if (ordenPrecio === "asc") {
@@ -355,7 +350,7 @@ function cargarCatalogofiltro(tipo, ordenPrecio) {
       let primerasTresLetras = bolso.nombre.substring(0, 3).toLowerCase();
 
       if (nombresProcesados.has(primerasTresLetras)) {
-        return; 
+        return;
       }
 
       nombresProcesados.add(primerasTresLetras);
@@ -365,9 +360,7 @@ function cargarCatalogofiltro(tipo, ordenPrecio) {
             <div class="card-catalog ${bolso.imagen2 === "valor" ? "single-image" : ""}">
                 <div class="card h-100">
                     <div class="card-image">
-                        <!-- Primera imagen -->
                         <img src="${bolso.imagen1}" alt="${bolso.nombre}" class="main-image">
-                        <!-- Segunda imagen si existe -->
                         ${bolso.imagen2 !== "valor" ? `<img src="${bolso.imagen2}" alt="${bolso.nombre}" class="second-image">` : ""}
                         <div class="card-overlay">
                             <div>
@@ -381,7 +374,7 @@ function cargarCatalogofiltro(tipo, ordenPrecio) {
                         </div>
                     </div>
                     <div class="card-body">
-                        <p class="card-description">${bolso.nombre}</p>
+                        <p class="card-description" data-product="${bolso.nombre}">${bolso.nombre}</p>
                         <p class="card-price text-success">₡${bolso.precio}</p>
                         <button class="btn btn-primary btn-cart">Añadir al carrito</button>
                     </div>
@@ -392,10 +385,26 @@ function cargarCatalogofiltro(tipo, ordenPrecio) {
 
       catalogContainer.innerHTML += card;
     });
+
   } catch (error) {
     alert(`Error al generar el catálogo: ${error}`);
   }
 }
+
+document.getElementById("catalog-container-id").addEventListener("click", function (event) {
+  const target = event.target;
+
+  // Verifica si el clic fue en un elemento con clase `card-description`
+  if (target.classList.contains("card-description")) {
+    const productName = target.textContent.trim(); // Extrae el texto del elemento
+    if (productName) {
+      console.log(`Redirigiendo al producto: ${productName}`); // Para depuración
+      window.location.href = `shop-single.html?product=${encodeURIComponent(productName)}`;
+    } else {
+      console.error("No se pudo obtener el nombre del producto.");
+    }
+  }
+});
 
 function CallCatalogofiltro(tipo, ordenPrecio) {
   var uriServer = "https://juanpabq05.github.io/Mobar/assets/datos/bolsos.json";
@@ -404,13 +413,13 @@ function CallCatalogofiltro(tipo, ordenPrecio) {
     type: "get",
     dataType: "json",
     success: function (data) {
-      OnSuccessfiltro(data, tipo, ordenPrecio); 
+      OnSuccessfiltro(data, tipo, ordenPrecio);
     },
     error: OnError
   });
 }
 
 function OnSuccessfiltro(data, tipo, ordenPrecio) {
-  datos = data; 
+  datos = data;
   cargarCatalogofiltro(tipo, ordenPrecio);
 }

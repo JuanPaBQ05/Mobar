@@ -11,23 +11,33 @@ let map, directionsService, directionsRenderer, marker1;
 document.addEventListener("DOMContentLoaded", () => {
     const tipoRadios = document.querySelectorAll('input[name="filter-type"]');
     const priceSelect = document.getElementById("price-filter");
-  
+
     tipoRadios.forEach(radio => {
-      radio.addEventListener("change", () => {
+        radio.addEventListener("change", () => {
+            const tipo = document.querySelector('input[name="filter-type"]:checked').value;
+            const ordenPrecio = priceSelect.value;
+            CallCatalogofiltro(tipo, ordenPrecio);
+        });
+    });
+    priceSelect.addEventListener("change", () => {
         const tipo = document.querySelector('input[name="filter-type"]:checked').value;
         const ordenPrecio = priceSelect.value;
         CallCatalogofiltro(tipo, ordenPrecio);
-      });
     });
-    priceSelect.addEventListener("change", () => {
-      const tipo = document.querySelector('input[name="filter-type"]:checked').value;
-      const ordenPrecio = priceSelect.value;
-      CallCatalogofiltro(tipo, ordenPrecio);
-    });
-  
-    CallCatalogofiltro("Todos", "default");
-  });
 
+    CallCatalogofiltro("Todos", "default");
+});
+
+
+
+
+const params = new URLSearchParams(window.location.search);
+const productName = params.get("product");
+
+if (productName) {
+  document.getElementById("product-name").textContent = productName;
+
+}
 /*async function initMap() {
   // The location of Uluru
   const position = { lat: 10.083014826799685, lng: -84.24696911420385 };
@@ -70,11 +80,11 @@ function initMap() {
     // Inicializar servicios de direcciones
     directionsService = new google.maps.DirectionsService();
     directionsRenderer = new google.maps.DirectionsRenderer({
-        map: map, 
-        suppressMarkers: false, 
+        map: map,
+        suppressMarkers: false,
     });
 
-    
+
     map.addListener("click", (event) => {
         const userLocation = event.latLng;
 
@@ -86,24 +96,24 @@ function initMap() {
 function calculateAndDisplayRoute(userLocation, storeLocation) {
     directionsService.route(
         {
-            origin: userLocation, 
-            destination: storeLocation, 
-            travelMode: google.maps.TravelMode.DRIVING, 
+            origin: userLocation,
+            destination: storeLocation,
+            travelMode: google.maps.TravelMode.DRIVING,
         },
         (response, status) => {
             if (status === "OK") {
                 directionsRenderer.setDirections(response);
 
 
-                const route = response.routes[0].legs[0]; 
-                const distance = route.distance.text; 
-                const duration = route.duration.text; 
+                const route = response.routes[0].legs[0];
+                const distance = route.distance.text;
+                const duration = route.duration.text;
 
-                
+
                 document.getElementById("route-time").textContent = `Tiempo estimado: ${duration}`;
                 document.getElementById("route-distance").textContent = `Distancia: ${distance}`;
 
-                
+
                 const routeInfoContainer = document.getElementById("route-info");
                 routeInfoContainer.style.opacity = "1";
             } else {
@@ -126,10 +136,10 @@ function calculateAge() {
 
 function emailCliente() {
     let parms = {
-        name: document.getElementById("fullName").value, 
-        email: document.getElementById("email").value,   
-        genre: document.querySelector('input[name="gender"]:checked').value, 
-        date: document.getElementById("birthDate").value 
+        name: document.getElementById("fullName").value,
+        email: document.getElementById("email").value,
+        genre: document.querySelector('input[name="gender"]:checked').value,
+        date: document.getElementById("birthDate").value
     };
 
     //Validar que todos los valores se hayan llenado correctamente
@@ -138,11 +148,12 @@ function emailCliente() {
         return;
     }
 
-    console.log(parms); 
+    console.log(parms);
 
     enviarEmail(parms);
 }
 
 function enviarEmail(parms) {
-    emailjs.send("service_4qljfrf","template_dw4makc",parms).then(alert("Email enviado"));
+    emailjs.send("service_4qljfrf", "template_dw4makc", parms).then(alert("Email enviado"));
 }
+
