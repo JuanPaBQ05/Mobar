@@ -706,7 +706,7 @@ a {
     width: 100%;
     padding: 45px;
     display: flex;
-    background-image:url("/assets/img/fondoabout.jpg");
+    background-image:url("https://juanpabq05.github.io/Mobar/assets/img/fondoabout.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -1398,8 +1398,9 @@ a {
 
 
 @media (max-width: 790px) {
-    #multi-item-example .carousel-inner {
-        height: 300px; 
+    #carousel-container .row {
+        height: 200px; 
+        width: auto;
     }
 
     #multi-item-example .carousel-item img {
