@@ -768,6 +768,13 @@ a {
     align-items: center;
 }
 
+.nuestra-vision p{
+    font-family: var(--main-font);
+    padding: 60px;
+    justify-content: center;
+    align-items: center;
+}
+
 .about-info-text h2 {
     color: var(--primary);
     text-align: center;
