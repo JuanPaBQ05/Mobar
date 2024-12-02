@@ -214,49 +214,6 @@ function OnErrorInicio(jqXHR, textStatus, errorThrown) {
 }
 
 
-function CallServiceMenuInicio() {
-  var uriServer = "https://juanpabq05.github.io/Mobar/assets/datos/bolsos.json";
-  $.ajax({
-    url: uriServer,
-    type: "get",
-    dataType: "json",
-    success: function (data) {
-      OnSuccessInicio(data);
-    },
-    error: OnErrorInicio
-  });
-}
-
-function OnSuccessInicio(data) {
-  datos = data;
-  cargarInicio();
-}
-
-function OnErrorInicio(jqXHR, textStatus, errorThrown) {
-  alert(`Error al cargar los datos: ${errorThrown}`);
-}
-
-function CallServiceMenuInicio() {
-  var uriServer = "https://juanpabq05.github.io/Mobar/assets/datos/bolsos.json";
-  $.ajax({
-    url: uriServer,
-    type: "get",
-    dataType: "json",
-    success: function (data) {
-      OnSuccessInicio(data);
-    },
-    error: OnErrorInicio
-  });
-}
-function OnSuccessInicio(data) {
-  datos = data;
-  cargarInicio();
-}
-
-function OnErrorInicio(jqXHR, textStatus, errorThrown) {
-  alert(`Error al cargar los datos: ${errorThrown}`);
-}
-
 
 function cargarInicio() {
   try {

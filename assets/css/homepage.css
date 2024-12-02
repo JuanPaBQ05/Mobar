@@ -242,8 +242,12 @@ a {
 .shopping-kart img {
     width: 100%;
     height: auto;
+    transition: filter 0.3s ease; 
 }
 
+.shopping-kart-icon:hover img {
+    filter: brightness(0) saturate(100%) invert(30%); 
+}
 
 
 .kart-badge {
@@ -262,6 +266,10 @@ a {
     border: 2px solid white;
 }
 
+.offcanvas-title{
+    font-family: var(--thir-font);
+
+}
 
 
 /******* Carousel *********/
@@ -468,7 +476,6 @@ a {
     z-index: 10;
     opacity: 0;
     transform: translateY(10px);
-    /* Posición inicial para efecto */
     transition: opacity 0.2s ease, transform 0.2s ease;
 }
 
@@ -690,7 +697,6 @@ a {
     flex: 1;
     height: 3px;
     background: linear-gradient(to right, #ff5733, #33c1ff);
-    /* Gradient color */
 }
 
 
@@ -700,7 +706,7 @@ a {
     width: 100%;
     padding: 45px;
     display: flex;
-    background-image:url("/assets/img/bluemountains.jpg");
+    background-image:url("/assets/img/fondoabout.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -789,42 +795,59 @@ a {
     border-radius: 10px;
 }
 
-
-
 .fundadores {
-    gap: 40px;
+    border-radius: 5px;
+    margin-top: 20px;
+    padding: 50px 0;
+    background-color: var(--forth);
 }
+
+.fundadores h3{
+    font-family: var(--thir-font);
+    color: var(--primary);
+    font-size: 40px;
+}
+
 
 .founder {
-    text-align: center;
-    margin-bottom: 20px;
-    background: #343a40;
     position: relative;
     overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    padding: 0;
 }
+
 
 .founder img {
     width: 100%;
-    /* La imagen ocupa todo el ancho del contenedor */
-    height: auto;
-    /* Mantiene la proporción de la imagen */
-    display: block;
+    height: 500px; 
+    object-fit: cover;
+    transition: transform 0.6s ease; 
 }
 
 .founder-info {
     position: absolute;
+    bottom: -100%; 
     left: 0;
-    right: 0;
-    bottom: -35px;
-    transition: bottom 0.4s;
+    width: 100%; 
+    background-color: rgba(0, 0, 0, 0.5); 
+    color: white;
+    text-align: center;
+    padding: 15px; 
+    transition: bottom 0.6s ease; 
+}
+
+.founder:hover .founder-info {
+    bottom: 0; 
+    background: rgba(0, 0, 0, 0.7); 
 }
 
 
-.founder:hover .founder-info {
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.8) 20%, rgba(0, 212, 255, 0) 100%);
-    opacity: 1;
-    bottom: 0;
-    transition: bottom 0.4s;
+.fundadores .row.justify-content-center {
+    display: flex;
+    gap: 20px;
 }
 
 
@@ -976,32 +999,55 @@ a {
     margin-bottom: 20px;
 }
 
-/* Sección de filtros */
 .filter-section {
     position: sticky; 
     top: 0; 
-    border-right: 1px solid #ccc;
+    border-right: 1px solid var(--secondary);
     padding: 15px;
     height: fit-content; 
-    background-color: #fff; 
+    background-color: var(--light); 
     z-index: 10;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    font-family: var(--thir-font);
 }
 
-/* Estilos adicionales para los filtros */
-.filter {
+
+.filter-section h4 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: var(--dark); 
+}
+
+.filter-section label {
+    display: block; 
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #495057; 
+    cursor: pointer; 
+}
+
+.filter-section select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd; 
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #ffffff; 
+    color: #495057; 
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.filter-section select:hover,
+.filter-section select:focus {
+    border-color: var(--forth); 
+}
+
+.filter-section div {
     margin-bottom: 20px;
 }
 
-.filter h3 {
-    margin-bottom: 10px;
-}
-
-.filter input[type="range"] {
-    width: 100%;
-}
-
-/* Productos */
 .product-grid {
     padding-left: 15px;
 }
@@ -1112,7 +1158,6 @@ a {
     background-color: #e67e22;
 }
 
-/* Estilos responsivos */
 @media (max-width: 768px) {
     .reservation-form .row {
         flex-direction: column;
@@ -1246,7 +1291,6 @@ a {
     visibility: visible;
 }
 
-/* Efecto hover */
 .back-to-top:hover {
     background-color: #0056b3;
 }
@@ -1353,7 +1397,57 @@ a {
 }
 
 
-/****************************-----------------------
+@media (max-width: 790px) {
+    #multi-item-example .carousel-inner {
+        height: 300px; 
+    }
+
+    #multi-item-example .carousel-item img {
+        object-fit: cover; 
+        width: 100%;
+        height: 100%;
+    }
+}
+
+/* Fondo semitransparente */
+#overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+.popup-message {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    text-align: center;
+}
+
+.popup-message p {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.popup-message .btn {
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+
+
+/****************************---------------------------------
 ----------------------------------SECTION CARRITO DE COMPRAS--------------
 ----------------------------------------------****************/
 
@@ -1377,3 +1471,40 @@ a {
 .btn-custom:hover {
     background-color: #c0392b;
 }
+
+#main-kart .btn{
+    background-color: var(--third);
+}
+
+.main-kart{
+    background-color: var(--primary);
+}
+
+/**********************************************************
+*********************************AUTOR PAGINA*************
+*************************************************/
+
+#autor-container{
+    background-color: var(--light);
+    padding: 30px;
+}
+
+#autor-container h1{
+    font-family: var(--second-font);
+    color: var(--forth);
+    margin-bottom: 24px;
+    margin-top: 30px;
+}
+
+#autor-container img{
+    border: solid var(--third) 4px;
+    border-radius: 5px;
+}
+
+#autor-container li{
+    font-family: var(--thir-font);
+    color: var(--dark);
+    margin-bottom: 9px;
+    font-size: x-large;
+}
+

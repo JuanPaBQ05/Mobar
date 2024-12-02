@@ -6,21 +6,27 @@ document.addEventListener("DOMContentLoaded", () => {
     const tipoRadios = document.querySelectorAll('input[name="filter-type"]');
     const priceSelect = document.getElementById("price-filter");
 
-    tipoRadios.forEach(radio => {
-        radio.addEventListener("change", () => {
+    try {
+        tipoRadios.forEach(radio => {
+            radio.addEventListener("change", () => {
+                const tipo = document.querySelector('input[name="filter-type"]:checked').value;
+                const ordenPrecio = priceSelect.value;
+                CallCatalogofiltro(tipo, ordenPrecio);
+            });
+        });
+        priceSelect.addEventListener("change", () => {
             const tipo = document.querySelector('input[name="filter-type"]:checked').value;
             const ordenPrecio = priceSelect.value;
             CallCatalogofiltro(tipo, ordenPrecio);
         });
-    });
-    priceSelect.addEventListener("change", () => {
-        const tipo = document.querySelector('input[name="filter-type"]:checked').value;
-        const ordenPrecio = priceSelect.value;
-        CallCatalogofiltro(tipo, ordenPrecio);
-    });
-
-    CallCatalogofiltro("Todos", "default");
+    
+        CallCatalogofiltro("Todos", "default");
+    } catch (error) {
+        
+    }
 });
+
+
 
 
 
@@ -142,6 +148,20 @@ function emailCliente() {
 
     console.log(parms);
     emailjs.send("service_4qljfrf", "template_dw4makc", parms).then(alert("Email enviado"));
+}
+
+function getFilterFromURL() {
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get('filter'); 
+}
+
+window.onload = function() {
+    const filter = getFilterFromURL();
+    if (filter) {
+        filterCatalogo(filter); 
+    } else {
+        loadCatalogo();
+    }
 }
 
 

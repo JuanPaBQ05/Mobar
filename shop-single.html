@@ -48,6 +48,7 @@
 
 <body>
     <main>
+        <!-- Header -->
         <header class="header">
             <nav class="header-nav">
                 <div class="header-left">
@@ -82,14 +83,14 @@
             </nav>
             <!-- Navbar o barra de navegación -->
             <nav class="navbar navbar-expand-lg sticky-top bg-light" id="navbar-principal">
-                <a class="navbar-brand mx-3" href="#">
+                <a class="navbar-brand mx-3" href="index.html">
                     <img src="assets/Mobar imgs/logo-celeste.png" alt="IMAGEN" class="d-inline-block align-text-top">
                 </a>
                 <!-- Navbar Body -->
                 <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
                     aria-labelledby="offcanvasNavbarLabel">
                     <div class="offcanvas-header">
-                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel"> Mobar </h5>
+                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Mobar CR</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                     </div>
                     <div class="offcanvas-body" id="nav-links-theme">
@@ -101,29 +102,15 @@
                                 <a class="nav-link mx-lg-2" href="about.html">Nosotros</a>
                             </li>
                             <!-- Dropdown para Catálogo -->
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle mx-lg-2" href="catalogo.html" id="catalogoDropdown"
-                                    role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <li class="nav-item">
+                                <a class="nav-link mx-lg-2" href="catalogo.html">
                                     Catálogo
                                 </a>
-                                <ul class="dropdown-menu" aria-labelledby="catalogoDropdown">
-                                    <li><a class="dropdown-item" href="#">Espalda</a></li>
-                                    <li><a class="dropdown-item" href="#">Largos</a></li>
-                                </ul>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link mx-lg-2" href="services.html">Servicios</a>
                             </li>
                         </ul>
-                        <form class="d-flex" role="search">
-                            <div class="search-bar">
-                                <input class="form-control me-2" type="search" placeholder="Buscar..."
-                                    aria-label="Buscar">
-                                <button class="btn-search" type="submit">
-                                    <i class="bi bi-search"></i>
-                                </button>
-                            </div>
-                        </form>
                     </div>
                 </div>
                 <div class="shopping-kart">
@@ -139,12 +126,11 @@
             </nav>
             <!--Close Navbar-->
         </header>
-
         <!-- Close Header -->
-        <section class="bg-light">
+        <section class="principal-shop">
             <div class="container pb-5">
                 <div class="row">
-                    <div class="col-lg-5 mt-5">
+                    <div class="col-lg-5 mt-5" id="carousel-container">
                         <div class="card mb-3" id="product-image">
                             <img class="card-img img-fluid" src="" alt="Card image cap">
                         </div>
@@ -208,7 +194,6 @@
                 </div>
             </div>
         </section>
-        <div id="success-message">¡Producto agregado al carrito!</div>
         <footer id="footer" class="bg-dark h-100">
             <div class="container-fluid">
                 <div class="row">
@@ -306,7 +291,13 @@
                 </div>
             </div>
         </footer>
+        
     </main>
+    <div id="overlay" class="overlay"></div>
+        <div id="popup-message" class="popup-message">
+        <p>¡Producto agregado al carrito!</p>
+        <button id="close-popup" class="btn btn-success">Aceptar</button>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>

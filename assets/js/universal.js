@@ -27,26 +27,22 @@ document.getElementById("add-to-cart-form").addEventListener("submit", (event) =
     event.preventDefault();
 
     const productName = document.getElementById("product-name").textContent;
-    const productPrice = document.getElementById("product-price").textContent.replace("₡", "").trim(); 
+    const productPrice = document.getElementById("product-price").textContent.replace("₡", "").trim();
     const productColor = document.getElementById("color-select").value;
     const productImage = document.getElementById("product-image").querySelector("img").src;
 
     const product = {
         name: productName,
-        price: parseInt(productPrice), 
+        price: parseInt(productPrice),
         color: productColor,
-        image: productImage, 
+        image: productImage,
         quantity: productQuantity,
     };
 
-    let cart = JSON.parse(localStorage.getItem("cart")) || [];
-    cart.push(product);
-    localStorage.setItem("cart", JSON.stringify(cart));
-
+    saveToCart(product);
     updateCartBadge();
-    showSuccessMessage();
+    showPopupMessage(); 
 });
-
 
 function saveToCart(product) {
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
@@ -63,9 +59,39 @@ function saveToCart(product) {
 
     localStorage.setItem("cart", JSON.stringify(cart));
 }
-function showSuccessMessage() {
-    successMessage.style.display = "block";
-    setTimeout(() => {
-        successMessage.style.display = "none";
-    }, 2000);
+
+function updateCartBadge() {
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+    const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+
+    const kartBadge = document.querySelector(".kart-badge");
+
+    if (totalItems > 0) {
+        kartBadge.textContent = totalItems;
+        kartBadge.classList.remove("d-none");
+    } else {
+        kartBadge.classList.add("d-none");
+    }
 }
+
+function showPopupMessage() {
+    const overlay = document.getElementById("overlay");
+    const popupMessage = document.getElementById("popup-message");
+
+    overlay.style.display = "block";
+    popupMessage.style.display = "block";
+
+    document.getElementById("close-popup").addEventListener("click", hidePopupMessage);
+}
+
+function hidePopupMessage() {
+    const overlay = document.getElementById("overlay");
+    const popupMessage = document.getElementById("popup-message");
+
+    overlay.style.display = "none";
+    popupMessage.style.display = "none";
+}
+
+
+updateCartBadge();
+

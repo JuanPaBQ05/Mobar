@@ -18,7 +18,7 @@ document.getElementById("catalog-container-index").addEventListener("click", fun
       console.log(`Redirigiendo al producto: ${productName}`);
       window.location.href = `shop-single.html?product=${encodeURIComponent(productName)}`;
     } else {
-      console.error("No se pudo obtener el nombre del producto desde la descripción.");
+      console.error("No se pudo obtener el nombre");
     }
   }
 

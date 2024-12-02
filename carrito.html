@@ -43,7 +43,7 @@
     <link rel="stylesheet" href="assets/css/custom.css">
 </head>
 <body>
-    <main>
+    <main class="main-kart">
         <header class="header">
             <nav class="header-nav">
                 <div class="header-left">
@@ -85,7 +85,7 @@
                 <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
                     aria-labelledby="offcanvasNavbarLabel">
                     <div class="offcanvas-header">
-                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel"> Mobar </h5>
+                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Mobar CR</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                     </div>
                     <div class="offcanvas-body" id="nav-links-theme">
@@ -97,15 +97,10 @@
                                 <a class="nav-link mx-lg-2" href="about.html">Nosotros</a>
                             </li>
                             <!-- Dropdown para Catálogo -->
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle mx-lg-2" href="catalogo.html" id="catalogoDropdown"
-                                    role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <li class="nav-item">
+                                <a class="nav-link mx-lg-2" href="catalogo.html">
                                     Catálogo
                                 </a>
-                                <ul class="dropdown-menu" aria-labelledby="catalogoDropdown">
-                                    <li><a class="dropdown-item" href="#">Espalda</a></li>
-                                    <li><a class="dropdown-item" href="#">Largos</a></li>
-                                </ul>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link mx-lg-2" href="services.html">Servicios</a>
@@ -134,7 +129,7 @@
                     <div class="col-md-8">
                         <h2>Tu carrito</h2>
                         <div id="carrito-productos">
-
+                            <!--AQUI VAN LOS PRODUCTOS QUE SE VAN AÑADIENDO-->
                         </div>
                         <hr>
                         <p id="cantidad-productos"><strong>En tu bolso: 1 elemento</strong></p>
@@ -143,12 +138,18 @@
                     <!-- Columna derecha - Detalles del precio -->
                     <div class="col-md-4 total-container">
                         <h4>Detalles del precio</h4>
-                        <textarea class="form-control mb-3" rows="3" placeholder="Special instructions for seller"></textarea>
+                        <textarea class="form-control mb-3" rows="3" placeholder="Instrucciones específicas para envío"></textarea>
                         <div class="d-flex justify-content-between">
-                            <p>Total parcial Colones</p>
-                            <p>Total parcial Dolares</p>
-                            <p id="precio-colones"></p>
-                            <p id="precio-dolares"></p>
+                            <div class="">
+                                <div class="total-item d-flex justify-content-between">
+                                    <p class="label me-3">Total parcial Colones:</p>
+                                    <p class="value" id="precio-colones"></p>
+                                </div>
+                                <div class="total-item d-flex justify-content-between">
+                                    <p class="label me-3">Total parcial Dólares:</p>
+                                    <p class="value" id="precio-dolares"></p>
+                                </div>
+                            </div>
                         </div>
                         <button class="btn btn-custom w-100">Verificar</button>
                         <small class="text-muted d-block mt-2">Impuesto incluido. Envío calculado a la salida.</small>

@@ -149,6 +149,21 @@ function fillProductDetails(productos) {
         colorContainer.append(colorDiv);
     });
 }
+
+//CODIGO DE ZAYSHOP PLANTILLA PARA CAMBIAR IMAGEN PRINCIPAL
+document.addEventListener("DOMContentLoaded", () => {
+    const mainImage = document.querySelector("#product-image img");
+
+    const carouselImages = document.querySelectorAll(".carousel-inner img");
+
+    carouselImages.forEach((img) => {
+        img.addEventListener("click", () => {
+            const newSrc = img.getAttribute("src"); 
+            mainImage.setAttribute("src", newSrc); 
+        });
+    });
+});
+
 window.onload = loadProductData;
 
 
