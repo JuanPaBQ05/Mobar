@@ -11,6 +11,7 @@
     --second-font: "Send Flowers", cursive;
     --border-line: linear-gradient(to right, #F5D0C7, #B4E7FA);
     --thir-font: "Lora", serif;
+    color: beige
 }
 
 main {
@@ -242,6 +243,8 @@ a {
     width: 100%;
     height: auto;
 }
+
+
 
 .kart-badge {
     position: absolute;
@@ -1310,4 +1313,67 @@ a {
         width: 6.6rem;
         height: 6.6rem;
     }
+}
+
+/*---------------------------------------
+----------------------------single-shop section -----------
+-------------------------------------------- */
+
+#product-content .btn-success{
+    background-color: var(--forth);
+}
+
+#product-content .badge{
+    background-color: var(--primary);
+}
+
+#product-name{
+    font-family: var(--thir-font);
+}
+
+#product-price{
+    color: green;
+    font-family: var(--main-font);
+}
+
+#success-message {
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    background-color: #28a745;
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+    font-size: 18px;
+    text-align: center;
+    display: none;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+
+/****************************-----------------------
+----------------------------------SECTION CARRITO DE COMPRAS--------------
+----------------------------------------------****************/
+
+.product-image {
+    max-width: 100px;
+    height: auto;
+}
+.cart-container {
+    background-color: #f8f9fa;
+    padding: 30px;
+}
+.total-container {
+    background-color: #ffffff;
+    padding: 20px;
+    border: 1px solid #ddd;
+}
+.btn-custom {
+    background-color: #e74c3c;
+    color: white;
+}
+.btn-custom:hover {
+    background-color: #c0392b;
 }

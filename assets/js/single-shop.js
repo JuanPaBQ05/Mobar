@@ -7,7 +7,7 @@ function loadProductData() {
     const productName = getProductNameFromURL();
 
     if (!productName) {
-        alert("No se encontró el nombre del producto en la URL.");
+        alert("No se encontró el nombre del producto");
         return;
     }
 
@@ -31,47 +31,125 @@ function loadProductData() {
     });
 }
 
+
+//CARGAR LOS DETALLES PARA LA PAGINA CON LOS PARAMETROS
 function fillProductDetails(productos) {
-    // Toma el primer producto para llenar los detalles generales
     const mainProduct = productos[0];
-  
-    // Llena los elementos generales
+
     document.getElementById("product-name").textContent = mainProduct.nombre;
     document.getElementById("product-price").textContent = `₡${mainProduct.precio}`;
     document.getElementById("product-description").textContent = mainProduct.detalle;
-  
-    // Llena las imágenes y los colores
-    const imageContainer = document.getElementById("image-container");
-    const colorContainer = document.getElementById("color-container");
-  
-    imageContainer.innerHTML = ""; // Limpia cualquier contenido previo
-    colorContainer.innerHTML = ""; // Limpia cualquier contenido previo
-  
-    productos.forEach(producto => {
-      if (producto.imagen1 !== "valor") {
-        const imageElement = document.createElement("img");
-        imageElement.src = producto.imagen1;
-        imageElement.alt = producto.nombre;
-        imageElement.classList.add("product-image"); // Aplica tus estilos
-        imageContainer.appendChild(imageElement);
-      }
-  
-      const colorElement = document.createElement("div");
-      colorElement.classList.add("color-indicator");
-      colorElement.style.backgroundColor = mapColor(producto.color); // Asigna el color (función mapColor)
-      colorElement.title = producto.color; // Muestra el nombre del color al pasar el mouse
-      colorContainer.appendChild(colorElement);
-    });
-  }
-  function mapColor(colorName) {
-    const colorMap = {
-      "Café": "#8B4513",
-      "Rosado": "#FFC0CB",
-      "Negro": "#000000",
-      "Blanco": "#FFFFFF",
-    };
-  
-    return colorMap[colorName] || "#CCCCCC"; 
-  }
 
+    const $productImageDiv = $("#product-image");
+    $productImageDiv.empty();
+
+    const $mainImageElement = $("<img>").addClass("card-img img-fluid");
+    const mainImageSrc = mainProduct.imagen1 && mainProduct.imagen1 !== "valor"
+        ? mainProduct.imagen1
+        : "assets/img/default-image.jpg";
+    $mainImageElement.attr("src", mainImageSrc).attr("alt", mainProduct.nombre);
+    $productImageDiv.append($mainImageElement);
+
+    // Carrusel de imágenes
+    const $carouselInner = $(".carousel-inner");
+    $carouselInner.empty();
+
+    const allImages = [];
+    productos.forEach(product => {
+        if (product.imagen1 && product.imagen1 !== "valor") allImages.push(product.imagen1);
+        if (product.imagen2 && product.imagen2 !== "valor") allImages.push(product.imagen2);
+        if (product.imagen3 && product.imagen3 !== "valor") allImages.push(product.imagen3);
+    });
+
+    let activeClassSet = false;
+    for (let i = 0; i < allImages.length; i += 3) {
+        const imagesChunk = allImages.slice(i, i + 3);
+        const $carouselItem = $("<div>").addClass("carousel-item").addClass(activeClassSet ? "" : "active");
+        activeClassSet = true;
+
+        const $rowDiv = $("<div>").addClass("row");
+
+        imagesChunk.forEach(imageSrc => {
+            const $colDiv = $("<div>").addClass("col-4");
+            const $link = $("<a>").attr("href", "#");
+            const $img = $("<img>").addClass("card-img img-fluid").attr("src", imageSrc).attr("alt", "Product Image");
+
+            $link.append($img);
+            $colDiv.append($link);
+            $rowDiv.append($colDiv);
+        });
+
+        $carouselItem.append($rowDiv);
+        $carouselInner.append($carouselItem);
+    }
+    const $colorContainer = $("#color-id");
+    $colorContainer.empty();
+
+    const $select = $("<select>")
+        .attr("id", "color-select")
+        .addClass("form-select");
+
+    const uniqueColors = new Set();
+    productos.forEach(product => {
+        if (product.color && product.color !== "valor") {
+            uniqueColors.add(product.color);
+        }
+    });
+
+    if (uniqueColors.size === 0) {
+        const $defaultOption = $("<option>")
+            .text("Sin colores disponibles")
+            .attr("disabled", true)
+            .attr("selected", true);
+        $select.append($defaultOption);
+    } else {
+        uniqueColors.forEach(color => {
+            const $option = $("<option>")
+                .text(color)
+                .attr("value", color);
+            $select.append($option);
+        });
+    }
+
+    const $selectLabel = $("<label>")
+        .attr("for", "color-select")
+        .text("Seleccione un color:");
+
+    $colorContainer.append($selectLabel);
+    $colorContainer.append($select);
+}
+
+
+
+
+
+  function cargarColores(productos, productName) {
+    const productosConMismoNombre = productos.filter(product => product.nombre === productName);
+
+    const coloresDisponibles = new Set();
+    productosConMismoNombre.forEach(product => {
+        if (product.color && product.color !== "valor") {
+            coloresDisponibles.add(product.color);
+        }
+    });
+
+    const colorContainer = $("#color-id");
+    colorContainer.empty(); 
+
+    coloresDisponibles.forEach(color => {
+        const colorDiv = $("<div>").addClass("color-box")
+            .css("background-color", mapColor(color)) 
+            .attr("data-color", color)
+            .on("click", function() {
+                $(".color-box").removeClass("selected"); 
+                $(this).addClass("selected"); 
+                $("#selected-color").val(color); 
+            });
+
+        colorContainer.append(colorDiv);
+    });
+}
 window.onload = loadProductData;
+
+
+

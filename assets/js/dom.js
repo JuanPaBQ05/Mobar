@@ -1,10 +1,4 @@
 window.onload = initMap;
-window.onload = loadPagina;
-
-function loadPagina() {
-    CallServiceMenujq("ALL");
-}
-
 
 let map, directionsService, directionsRenderer, marker1;
 
@@ -77,7 +71,6 @@ function initMap() {
         title: "Tienda",
     });
 
-    // Inicializar servicios de direcciones
     directionsService = new google.maps.DirectionsService();
     directionsRenderer = new google.maps.DirectionsRenderer({
         map: map,
@@ -135,25 +128,20 @@ function calculateAge() {
 }
 
 function emailCliente() {
-    let parms = {
+    var parms = {
         name: document.getElementById("fullName").value,
         email: document.getElementById("email").value,
         genre: document.querySelector('input[name="gender"]:checked').value,
         date: document.getElementById("birthDate").value
     };
 
-    //Validar que todos los valores se hayan llenado correctamente
     if (!parms.name || !parms.email || !parms.genre || !parms.date) {
         alert("Por favor, completa todos los campos del formulario.");
         return;
     }
 
     console.log(parms);
-
-    enviarEmail(parms);
-}
-
-function enviarEmail(parms) {
     emailjs.send("service_4qljfrf", "template_dw4makc", parms).then(alert("Email enviado"));
 }
+
 

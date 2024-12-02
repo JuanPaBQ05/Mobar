@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>Mobar About</title>
+  <title>Mobar Services</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -52,107 +52,102 @@
       });
     })();
   </script>
+  <script src="assets/js/dom.js"></script>
 </head>
 
 <body>
   <main>
     <header class="header">
       <nav class="header-nav">
-        <div class="header-left">
-          <div class="row justify-content-between">
-            <div class="d-inline-block" id="header-nav-links">
-              <ul>
-                <li>
-                  <a href="" class="header-nav-links">
-                    Aviso Legal
-                  </a>
-                  <span class="">|</span>
-                </li>
-                <li>
-                  <a href="" class="header-nav-links">
-                    Envío
-                  </a>
-                  <span class="">|</span>
-                </li>
-                <li>
-                  <a href="index.html" class="header-nav-links">
-                    Inicio
-                  </a>
-                </li>
-              </ul>
-            </div>
+          <div class="header-left">
+              <div class="row justify-content-between">
+                  <div class="d-inline-block" id="header-nav-links">
+                      <ul>
+                          <li>
+                              <a href="" class="header-nav-links">
+                                  Aviso Legal
+                              </a>
+                              <span class="">|</span>
+                          </li>
+                          <li>
+                              <a href="" class="header-nav-links">
+                                  Envío
+                              </a>
+                              <span class="">|</span>
+                          </li>
+                          <li>
+                              <a href="index.html" class="header-nav-links">
+                                  Inicio
+                              </a>
+                          </li>
+                      </ul>
+                  </div>
+              </div>
           </div>
-        </div>
-        <div class="header-right">
-          <div class="row justify-content-between">
-
+          <div class="header-right">
+              <div class="row justify-content-between">
+              </div>
           </div>
-        </div>
       </nav>
-
       <!-- Navbar o barra de navegación -->
       <nav class="navbar navbar-expand-lg sticky-top bg-light" id="navbar-principal">
-        <a class="navbar-brand mx-3" href="#">
-          <img src="assets/Mobar imgs/logo-celeste.png" alt="IMAGEN" class="d-inline-block align-text-top">
-        </a>
-        <!-- Navbar Body -->
-        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-          <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="offcanvasNavbarLabel"> MobarCr </h5>
-            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-          </div>
-          <div class="offcanvas-body" id="nav-links-theme">
-            <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
-              <li class="nav-item">
-                <a class="nav-link active mx-lg-2" aria-current="page" href="index.html">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link mx-lg-2" href="about.html">Nosotros</a>
-              </li>
-              <!-- Dropdown para Catálogo -->
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle mx-lg-2" href="catalogo.html" id="catalogoDropdown" role="button"
-                  data-bs-toggle="dropdown" aria-expanded="false">
-                  Catálogo
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="catalogoDropdown">
-                  <li><a class="dropdown-item" href="catalogo.html">Espalda</a></li>
-                  <li><a class="dropdown-item" href="catalogo.html">Largos</a></li>
-                </ul>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link mx-lg-2" href="services.html">Servicios</a>
-              </li>
-            </ul>
-            <form class="d-flex" role="search">
-              <div class="search-bar">
-                <input class="form-control me-2" type="search" placeholder="Buscar..." aria-label="Buscar">
-                <button class="btn-search" type="submit">
-                  <i class="bi bi-search"></i>
-                </button>
-              </div>
-            </form>
-          </div>
-        </div>
-        <div class="shopping-kart">
-          <a href="" class="shopping-kart-icon">
-            <img src="assets/img/shopping-kart.png" alt="">
+          <a class="navbar-brand mx-3" href="index.html">
+              <img src="assets/Mobar imgs/logo-celeste.png" alt="IMAGEN" class="d-inline-block align-text-top">
           </a>
-          <span class="kart-badge">1</span>
-        </div>
-        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" id="navbar-principal-toggler"
-          data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+          <!-- Navbar Body -->
+          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+              aria-labelledby="offcanvasNavbarLabel">
+              <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="offcanvasNavbarLabel"> Mobar </h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+              </div>
+              <div class="offcanvas-body" id="nav-links-theme">
+                  <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
+                      <li class="nav-item">
+                          <a class="nav-link active mx-lg-2" aria-current="page" href="index.html">Home</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link mx-lg-2" href="about.html">Nosotros</a>
+                      </li>
+                      <!-- Dropdown para Catálogo -->
+                      <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle mx-lg-2" href="catalogo.html" id="catalogoDropdown"
+                              role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              Catálogo
+                          </a>
+                          <ul class="dropdown-menu" aria-labelledby="catalogoDropdown">
+                              <li><a class="dropdown-item" href="#">Espalda</a></li>
+                              <li><a class="dropdown-item" href="#">Largos</a></li>
+                          </ul>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link mx-lg-2" href="services.html">Servicios</a>
+                      </li>
+                  </ul>
+              </div>
+          </div>
+          <div class="shopping-kart">
+              <a href="carrito.html" class="shopping-kart-icon">
+                  <img src="assets/img/shopping-kart.png" alt="">
+              </a>
+              <span class="kart-badge d-none">0</span>
+          </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" id="navbar-principal-toggler"
+              data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
       </nav>
       <!--Close Navbar-->
-    </header>
+  </header>
+  <!-- Close Header -->
+
+  <!-- Close Header -->
     <div class="service-main">
       <div class="container-fluid text-center" id="titulo-service">
         <h1>Contacto profesional</h1>
       </div>
       <!-- Close Header -->
-      <form action="send_email.php" method="POST" class="reservation-form">
+      <form method="POST" class="reservation-form">
         <div class="row">
           <!-- Nombre completo -->
           <div class="col-md-6">
@@ -186,7 +181,7 @@
           </div>
         </div>
         <input type="hidden" id="age" name="age">
-        <button type="submit" class="btn btn-primary mt-3" onclick="emailCliente()">Registrar</button>
+        <button type="button" class="btn btn-primary mt-3" onclick="emailCliente()">Registrar</button>
       </form>
     </div>
 
@@ -303,7 +298,9 @@
       <span class="indicator" data-slide="2"></span>
     </div>
   </div>*/-->
-
+  
+  <script src="assets/js/universal.js"></script>
+  <script src="assets/js/carrito.js"></script>
 </body>
 
 </html>

@@ -33,7 +33,6 @@ function OnSuccess(data, tipo) {
   cargarCatalogo(tipo);
 }
 
-// Función de error
 function OnError(jqXHR, textStatus, errorThrown) {
   alert(`Error al cargar los datos: ${errorThrown}`);
 }
@@ -86,7 +85,6 @@ function cargarCatalogo(tipo) {
 </div>
           `;
 
-      // Insertar la tarjeta en el contenedor
       catalogContainer.innerHTML += card;
     });
 
@@ -283,32 +281,29 @@ function cargarInicio() {
 
       card = `
         <div class="col-md-4 col-sm-6 product-item">
-          <div class="card-catalog ${bolso.imagen2 === "valor" ? "single-image" : ""}">
-              <div class="card h-100">
-                  <div class="card-image">
-                      <!-- Primera imagen -->
-                      <img src="${bolso.imagen1}" alt="${bolso.nombre}" class="main-image">
-                      <!-- Segunda imagen si existe -->
-                      ${bolso.imagen2 && bolso.imagen2 !== "valor" ? `<img src="${bolso.imagen2}" alt="${bolso.nombre}" class="second-image">` : ""}
-                      <div class="card-overlay">
-                          <div>
-                              <i class="bi bi-bag-heart"></i>
-                              <span class="tooltip">Añadir a deseados</span>
-                          </div>
-                          <div>
-                              <i class="bi bi-eye"></i>
-                              <span class="tooltip">Ver producto</span>
-                          </div>
-                      </div>
-                  </div>
-                  <div class="card-body">
-                      <p class="card-description">${bolso.nombre}</p>
-                      <p class="card-price text-success">₡${bolso.precio}</p>
-                      <button class="btn btn-primary btn-cart">Añadir al carrito</button>
-                  </div>
-              </div>
+            <div class="card-catalog ${bolso.imagen2 === "valor" ? "single-image" : ""}">
+                <div class="card h-100">
+                    <div class="card-image">
+                        <img src="${bolso.imagen1}" alt="${bolso.nombre}" class="main-image">
+                        ${bolso.imagen2 !== "valor" ? `<img src="${bolso.imagen2}" alt="${bolso.nombre}" class="second-image">` : ""}
+                        <div class="card-overlay">
+                            <div>
+                                <i class="bi bi-bag-heart"></i>
+                                <span class="tooltip">Añadir a deseados</span>
+                            </div>
+                            <div>
+                                <i class="bi bi-eye" data-product="${bolso.nombre}"></i>
+                                <span class="tooltip">Ver producto</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-description" data-product="${bolso.nombre}">${bolso.nombre}</p>
+                        <p class="card-price text-success">₡${bolso.precio}</p>
+                    </div>
+                </div>
+            </div>
           </div>
-        </div>
       `;
 
       catalogContainer.innerHTML += card;
@@ -368,7 +363,7 @@ function cargarCatalogofiltro(tipo, ordenPrecio) {
                                 <span class="tooltip">Añadir a deseados</span>
                             </div>
                             <div>
-                                <i class="bi bi-eye"></i>
+                                <i class="bi bi-eye" data-product="${bolso.nombre}"></i>
                                 <span class="tooltip">Ver producto</span>
                             </div>
                         </div>
@@ -376,7 +371,6 @@ function cargarCatalogofiltro(tipo, ordenPrecio) {
                     <div class="card-body">
                         <p class="card-description" data-product="${bolso.nombre}">${bolso.nombre}</p>
                         <p class="card-price text-success">₡${bolso.precio}</p>
-                        <button class="btn btn-primary btn-cart">Añadir al carrito</button>
                     </div>
                 </div>
             </div>
@@ -394,17 +388,37 @@ function cargarCatalogofiltro(tipo, ordenPrecio) {
 document.getElementById("catalog-container-id").addEventListener("click", function (event) {
   const target = event.target;
 
-  // Verifica si el clic fue en un elemento con clase `card-description`
+  function getProductNameFromCard(element) {
+    const card = element.closest(".card"); 
+    if (card) {
+      const descriptionElement = card.querySelector(".card-description");
+      return descriptionElement ? descriptionElement.textContent.trim() : null;
+    }
+    return null;
+  }
+
   if (target.classList.contains("card-description")) {
-    const productName = target.textContent.trim(); // Extrae el texto del elemento
+    const productName = getProductNameFromCard(target);
     if (productName) {
-      console.log(`Redirigiendo al producto: ${productName}`); // Para depuración
+      console.log(`Redirigiendo al producto: ${productName}`);
       window.location.href = `shop-single.html?product=${encodeURIComponent(productName)}`;
     } else {
-      console.error("No se pudo obtener el nombre del producto.");
+      console.error("No se pudo obtener el nombre del producto desde la descripción.");
+    }
+  }
+
+  if (target.classList.contains("bi-eye")) {
+    const productName = getProductNameFromCard(target);
+    if (productName) {
+      console.log(`Redirigiendo desde el ícono del ojo: ${productName}`);
+      window.location.href = `shop-single.html?product=${encodeURIComponent(productName)}`;
+    } else {
+      console.error("No se pudo obtener el nombre del producto desde el ícono del ojo.");
     }
   }
 });
+
+
 
 function CallCatalogofiltro(tipo, ordenPrecio) {
   var uriServer = "https://juanpabq05.github.io/Mobar/assets/datos/bolsos.json";
@@ -423,3 +437,5 @@ function OnSuccessfiltro(data, tipo, ordenPrecio) {
   datos = data;
   cargarCatalogofiltro(tipo, ordenPrecio);
 }
+
+
