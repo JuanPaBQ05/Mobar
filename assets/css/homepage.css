@@ -569,9 +569,6 @@ a {
     transition-duration: 1.3s;
 }
 
-
-
-
 .btn-see-more {
     background-color: black;
     color: white;
@@ -630,10 +627,17 @@ a {
         width: 100%;
         padding: 0;
     }
+    #about-us-section-info .btn-see-about{
+        width: 100%;
+        padding: 10px 28px;
+        font-weight: bold;
+    }
     .category-container-homepage{
+        margin-top: 20px;
         padding: 0px;
         max-width: 100%;
     }
+    
 }
 
 #about-us-homepage-image {
