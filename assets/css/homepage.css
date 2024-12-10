@@ -619,13 +619,21 @@ a {
 }
 
 @media (max-width: 780px){
+    #about-homepage-container{
+        width: 100%;
+        padding: 2px;
+    }
     #about-us-homepage {
         width: 100%;
     }
-    #about-homepage-container{
+    #about-us-section-info{
         width: 100%;
+        padding: 0;
     }
-
+    .category-container-homepage{
+        padding: 0px;
+        max-width: 100%;
+    }
 }
 
 #about-us-homepage-image {
@@ -669,6 +677,11 @@ a {
     text-align: left;
     margin-bottom: 15px;
     color: black;
+    font-family: var(--thir-font);
+}
+
+#about-us-section-info .btn {
+   align-content:  center;
 }
 
 #about-us-section-info p {
@@ -859,7 +872,7 @@ a {
 
 
 
-@media (max-width: 700px) {
+@media (max-width: 1024px) {
     #about-info-video-container {
         align-items: center;
         background-color: var(--third);
@@ -983,7 +996,7 @@ a {
     width: 100%;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 1024px) {
     #map {
         height: 250;
         width: 100%;
@@ -1165,7 +1178,7 @@ a {
     background-color: #e67e22;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     .reservation-form .row {
         flex-direction: column;
     }
